@@ -26,7 +26,7 @@ const Home = () => {
             height={100}
             className="relative w-full h-auto max-w-xl md:max-w-md lg:max-w-lg xl:min-w-2xl object-contain rounded mx-auto"
           />
-          <p className="relative text-xl xl:text-3xl font-medium italic font-montserrat leading-relaxed" style={{fontFamily:"Public Sans, sans"}}>What's special about your product, service, or company? Highlight the things that set you apart from your competition, whether it's a special feature a unique philosophy, or awards and recognition that you have received. Think of this as your elevator pitch to get the reader's attention.</p>
+          <p className="relative text-xl xl:text-3xl font-medium italic font-montserrat leading-relaxed" style={{fontFamily:"Public Sans, sans"}}>What&apos;s special about your product, service, or company? Highlight the things that set you apart from your competition, whether it&apos;s a special feature a unique philosophy, or awards and recognition that you have received. Think of this as your elevator pitch to get the reader&apos;s attention.</p>
         </div>
         <video
           src='/images/Home/bracelet.mp4'
