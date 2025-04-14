@@ -24,7 +24,7 @@ const VideoSection = () => {
       {videoSection.map((item, index) => (
         <div
           key={index}
-          className="w-full h-[80vh] xl:h-screen overflow-hidden relative snap-start"
+          className="w-full h-[65vh] xl:h-screen overflow-hidden relative snap-start"
         >
           <video
             src={item.media}
