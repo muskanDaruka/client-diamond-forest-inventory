@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 function MetalType({ metalType }) {
   const [selectedMetals, setSelectedMetals] = useState([]);
@@ -22,13 +23,20 @@ function MetalType({ metalType }) {
               className="hidden"
             />
             <div
-              className={` text-sm text-[#332421] h-12 w-24 border flex items-center justify-center transition-all ${
+              className={` text-sm text-[#332421] w-24 border flex items-center justify-center transition-all ${
                 selectedMetals.includes(item.id)
-                  ? "border-white border-4 p-1"
+                  ? "border-white border-4"
                   : "border-gray-300"
               }`}
-              style={{ backgroundColor: item.colorCode }}
-            ></div>
+            >
+              <Image
+      src={item.img}
+      alt={item.title}
+      width={96}
+      height={48}
+      className="object-cover"
+    />
+            </div>
             <span className="text-xs mt-1 text-white">{item.title}</span>
           </label>
         ))}

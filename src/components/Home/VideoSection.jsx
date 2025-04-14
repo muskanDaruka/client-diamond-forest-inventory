@@ -1,15 +1,21 @@
-import React from 'react'
+"use client";
+import React,{useState} from 'react';
+import { useRouter } from 'next/navigation';
 
 const VideoSection = () => {
+  const [open, setOpen] = useState(false);
+    const router = useRouter();
+
   const videoSection = [
-    { type: 'video', media: '/images/Home/Bracelets.mp4', description: "Elevate your Everyday" },
-    { type: 'video', media: '/images/Home/Earrings.mp4', description: "Style Simplified" },
-    { type: 'video', media: '/images/Home/Necklace.mp4', description: "Enhance Everyday" },
-    { type: 'video', media: '/images/Home/Rings.mp4', description: "Where Style meets function" },
-  ]
+    { type: 'video', media: '/images/Home/Bracelets.mp4', description: 'Elevate your everyday', path:"/bracelet" },
+    { type: 'video', media: '/images/Home/Earrings.mp4', description: 'Style simplified' },
+    { type: 'video', media: '/images/Home/Necklace.mp4', description: 'Enhance everyday' },
+    { type: 'video', media: '/images/Home/Rings.mp4', description: 'Where style meets function' },
+  ];
 
   return (
-    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory"
+    <div
+      className="w-full h-screen xl:h-screen overflow-y-scroll snap-y snap-mandatory"
       style={{
         scrollbarWidth: 'none',
         msOverflowStyle: 'none',
@@ -18,7 +24,7 @@ const VideoSection = () => {
       {videoSection.map((item, index) => (
         <div
           key={index}
-          className="w-full h-screen overflow-hidden relative snap-start"
+          className="w-full h-[65vh] xl:h-screen overflow-hidden relative snap-start"
         >
           <video
             src={item.media}
@@ -27,18 +33,25 @@ const VideoSection = () => {
             loop
             playsInline
             className="w-full h-full object-cover opacity-80"
+            onClick={() => {
+              router.push(item.path);
+              setOpen(false); 
+            }}
           />
-          <span className="flex items-center justify-center"
-            style={{ fontFamily: "Burgues Script, Edwardian Script ITC, cursive" }}
-          >
-            <p className="absolute bottom-6 xl:text-5xl text-md text-black text-center px-4 font-medium">
+          <div className="absolute bottom-4 sm:bottom-6 w-full flex justify-center px-4">
+            <p
+              className="text-3xl md:text-4xl xl:text-5xl text-black text-center font-medium "
+              style={{
+                fontFamily: 'Burgues Script, Edwardian Script ITC, cursive',
+              }}
+            >
               {item.description}
             </p>
-          </span>
+          </div>
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default VideoSection
+export default VideoSection;

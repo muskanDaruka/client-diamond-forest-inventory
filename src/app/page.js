@@ -1,6 +1,6 @@
 import VideoSection from "@/components/Home/VideoSection";
 import React from "react";
-import story from "../../public/story/About.png";
+import story from '../../public/images/story/About.png';
 import Image from "next/image";
 import OurProduct from "@/components/OurProductSection";
 import background from "../../public/images/Home/background.png";
@@ -10,7 +10,7 @@ const Home = () => {
     <div className="flex flex-col">
       <VideoSection />
       <section className="h-screen">
-        <div className="relative flex xl:flex-row flex-col justify-around items-center p-4 h-screen">
+        <div className="relative flex xl:flex-row flex-col xl:justify-around justify-center items-center p-4 h-screen">
           <Image
             src={background}
             alt="background Image"

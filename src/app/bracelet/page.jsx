@@ -59,16 +59,16 @@ function Page() {
                                 onChange={() => setInStock(!inStock)}
                                 className="cursor-pointer rounded-full w-5 h-5"
                             />
-                            <label htmlFor="inStock" className="xl:text-2xl text-white hover:text-gray-800 text-md font-medium cursor-pointer">
+                            <label htmlFor="inStock" className="xl:text-2xl text-white hover:text-[#666769] text-md font-medium cursor-pointer">
                                 InStock
                             </label>
                         </div>
                         <div>
                             <div className="flex items-center gap-3 p-1" onClick={() => setIsOpen(!isOpen)}>
-                                <h3 className="xl:text-2xl text-md font-medium text-white hover:text-gray-800 xl:mt-4 mt-4">
+                                <h3 className="xl:text-2xl text-md font-medium text-white hover:text-[#666769] xl:mt-4 mt-4">
                                     Filter
                                 </h3>
-                                <TbAdjustmentsHorizontal size={25} className="text-white hover:text-gray-800 xl:mt-4 mt-4" />
+                                <TbAdjustmentsHorizontal size={25} className="text-white hover:text-[#666769] xl:mt-4 mt-4" />
                             </div>
                         </div>
                         </div>
@@ -81,7 +81,7 @@ function Page() {
                             <RxCross2
                                 onClick={() => setIsOpen(false)}
                                 size={25}
-                                className="text-black me-2 cursor-pointer hover:text-gray-800"
+                                className="text-black me-2 cursor-pointer hover:text-[#666769]"
                             />
                         </div>
                         <Filters />
@@ -89,8 +89,8 @@ function Page() {
                 </div>
                 <div className='flex justify-between items-center m-8 mb-0 cursor-pointer lg:hidden'>
                     <div className="flex items-center gap-3 p-1" onClick={() => setIsOpen(true)}>
-                        <h3 className="xl:text-2xl text-md font-medium text-white hover:text-gray-800">Filter</h3>
-                        <TbAdjustmentsHorizontal size={25} className="text-white hover:text-gray-800" />
+                        <h3 className="xl:text-2xl text-md font-medium text-white hover:text-[#666769]">Filter</h3>
+                        <TbAdjustmentsHorizontal size={25} className="text-white hover:text-[#666769]" />
                     </div>
                     <div>
                         <section className={`${isOpen ? "block" : "hidden"} xl:w-1/4 p-2 w-full top-0 left-0 z-50 bg-white h-screen fixed cursor-pointer overflow-y-auto`}>

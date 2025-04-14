@@ -2,11 +2,11 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import ring from "../../public/products/ring.png";
-import bracelet from "../../public/products/bracelet.png";
-import earring from "../../public/products/earrings.png";
-import necklace from "../../public/products/necklace.jpg";
-import pendant from "../../public/products/pendant.png";
+import ring from "../../public/images/products/ring.png";
+import bracelet from "../../public/images/products/bracelet.png";
+import earring from "../../public/images/products/earrings.png";
+import necklace from "../../public/images/products/necklace.jpg";
+import pendant from "../../public/images/products/pendant.png";
 import background from '../../public/images/Home/background.png'
 
 function OurProduct() {

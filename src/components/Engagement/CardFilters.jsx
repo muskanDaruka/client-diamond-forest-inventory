@@ -50,14 +50,14 @@ function CardFilters({ metalType, shape, carat }) {
             <div className="flex flex-col space-y-3 md:space-y-5">
                 {[{ title: 'Metal', items: metalType }, { title: 'Shape', items: shape }, { title: 'Carat', items: carat }].map(({ title, items }) => (
                     <div key={title} className="flex flex-col md:flex-row items-center md:items-start mt-2 cursor-pointer">
-                        <h3 className="xl:text-lg sm:text-xs text-white hover:text-gray-800">{title}</h3>
+                        <h3 className="xl:text-lg text-xs text-white hover:text-[#666769]">{title}</h3>
                         <div className="flex justify-around items-center w-full">
                             <button
                                 onClick={() => scroll(title, 'left')}
                                 disabled={!scrollState[title]?.left}
-                                className="text-white hover:text-gray-800 disabled:text-gray-300"
+                                className="text-white hover:text-[#666769] disabled:text-gray-300"
                             >
-                                <SlArrowLeft size={20} />
+                                <SlArrowLeft size={20} className='xl:size-[20px] md:size-[18px] size-[15px]'/>
                             </button>
                             <div
                                 ref={scrollRefs[title]}
@@ -77,24 +77,24 @@ function CardFilters({ metalType, shape, carat }) {
                                         />
                                         {title === 'Metal' && 'colorCode' in item ? (
                                             <div
-                                                className={`group xl:h-6 xl:w-12 w-6 h-6 border ${selected[title] === item.id ? 'border-white' : 'border-gray-300'
-                                                    } flex items-center justify-center hover:border-gray-800`}
+                                                className={`group xl:h-6 xl:w-12 w-6 h-5 border ${selected[title] === item.id ? 'border border-white' : 'border-gray-300'
+                                                    } flex items-center justify-center hover:border-[#666769]`}
                                                 style={{ backgroundColor: item.colorCode }}
                                             >
                                                 <span
-                                                    className={`transition-opacity duration-200 text-xs text-white ${selected[title] === item.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                                                    className={`transition-opacity duration-200 text-xs text-black ${selected[title] === item.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                                                         }`}
                                                 >
                                                     {item.text}
                                                 </span>
                                             </div>
                                         ) : title === 'Shape' && 'img' in item ? (
-                                            <div className={`w-10 flex items-center  justify-center ${selected[title] === item.id ? 'p-1  border border-white' : 'hover:border hover:border-white'}`}>
+                                            <div className={`xl:w-10 md:w-8 w-6 flex items-center  justify-center ${selected[title] === item.id ? 'p-1  border border-white' : 'hover:border hover:border-white'}`}>
                                                 <Image src={item.img} alt={item.alt || ''} className="w-full bg-white rounded-full" />
                                             </div>
                                         ) : title === 'Carat' && 'text' in item ? (
                                             <div
-                                                className={`xl:text-md text-white flex items-center justify-center cursor-pointer px-4 ${selected[title] === item.id ? 'border border-white' : 'hover:border hover:border-white'}`}
+                                                className={`xl:text-md md:text-base text-xs text-white flex items-center justify-center cursor-pointer px-4 ${selected[title] === item.id ? 'border border-white' : 'hover:border hover:border-white'}`}
                                             >
                                                 {item.text}
                                             </div>
@@ -105,9 +105,9 @@ function CardFilters({ metalType, shape, carat }) {
                             <button
                                 onClick={() => scroll(title, 'right')}
                                 disabled={!scrollState[title]?.right}
-                                className="text-white hover:text-gray-800 disabled:text-gray-300"
+                                className="text-white hover:text-[#666769] disabled:text-gray-300"
                             >
-                                <SlArrowRight size={20} />
+                                <SlArrowRight size={20} className='xl:size-[20px] md:size-[18px] size-[15px]'/>
                             </button>
                         </div>
                     </div>

@@ -15,10 +15,9 @@ function Filters() {
     const [selectedStyles, setSelectedStyles] = useState([]);
 
     const metal = [
-        { id: 1, colorCode: "#ffffff", text: "14K", title: "White gold" },
-        { id: 2, colorCode: "#e5ce83", text: "14K", title: "Yellow gold" },
-        { id: 3, colorCode: "#e7ba9a", text: "14K", title: "Rose gold" },
-        { id: 4, colorCode: "#ffffff", text: "14K", title: "Platinum" },
+        { id: 1, colorCode: "#deddde", text: "14K", title: "White gold" },
+        { id: 2, colorCode: "#ffe998", text: "14K", title: "Yellow gold" },
+        { id: 3, colorCode: "#ecc5c0", text: "14K", title: "Rose gold" },
     ];
     const style = [
         { id: 1, img: style1, alt: "Mixed Metal", title: "Mixed Metal" },
@@ -60,7 +59,7 @@ function Filters() {
                 <div>
                     <div className='xl:mt-0 mt-6'>
                         <div className="flex justify-between items-center cursor-pointer" onClick={() => setToggleMetal(!toggleMetal)}>
-                            <p className="xl:text-xl text-md font-semibold text-black hover:text-gray-800">Metal</p>
+                            <p className="xl:text-xl text-md font-semibold text-black hover:text-[#666769]">Metal</p>
                             <Icon icon={toggleMetal ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-[#332421]" />
                         </div>
                         {toggleMetal && (
@@ -74,19 +73,19 @@ function Filters() {
                                             className="hidden"
                                         />
                                         <div
-                                            className={`rounded-full border h-14 w-14 flex items-center justify-center ${selectedMetals.includes(item.id) ? 'border-black border-2' : 'border-gray-300'}`}
+                                            className={`rounded-full border h-14 w-14 flex items-center justify-center ${selectedMetals.includes(item.id) ? 'border-white border-2' : 'border-gray-300'}`}
                                             style={{ backgroundColor: item.colorCode }}
                                         ></div>
-                                        <div className="xl:text-md text-sm text-black text-center mt-1 hover:text-gray-800">{item.title}</div>
+                                        <div className="xl:text-md text-sm text-black text-center mt-1 hover:text-[#666769]">{item.title}</div>
                                     </label>
                                 ))}
                             </div>
                         )}
                     </div>
                 </div>
-                <div className='xl:mt-0 mt-6'>
+                {/* <div className='xl:mt-0 mt-6'>
                     <div className="flex justify-between items-center cursor-pointer" onClick={() => setToggleStyle(!toggleStyle)}>
-                        <p className="xl:text-xl text-md font-semibold text-black hover:text-gray-800">Style</p>
+                        <p className="xl:text-xl text-md font-semibold text-black hover:text-[#666769]">Style</p>
                         <Icon icon={toggleStyle ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-[#332421]" />
                     </div>
                     {toggleStyle && (
@@ -102,16 +101,16 @@ function Filters() {
                                     <div className={`p-1 rounded-full ${selectedStyles.includes(item.id) ? 'border-black border-2' : 'border-transparent border'}`}>
                                         <Image src={item.img} alt={item.alt} className="xl:w-10 xl:h-10 w-8 h-8 rounded-full" height={24} width={24} />
                                     </div>
-                                    <div className="xl:text-md text-sm text-black text-center mt-1 hover:text-gray-800">{item.title}</div>
+                                    <div className="xl:text-md text-sm text-black text-center mt-1 hover:text-[#666769]">{item.title}</div>
                                 </label>
                             ))}
                         </div>
                     )}
-                </div>
+                </div> */}
                 <div className="xl:mt-0 mt-6">
                     <div className="space-y-4">
                         <div className="flex items-center justify-between cursor-pointer" onClick={() => setTogglePrice(!togglePrice)}>
-                            <h3 className="text-xl font-medium text-black hover:text-gray-800">Price</h3>
+                            <h3 className="text-xl font-medium text-black hover:text-[#666769]">Price</h3>
                             <Icon icon={togglePrice ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-black]" />
                         </div>
                         {togglePrice && (
@@ -123,15 +122,15 @@ function Filters() {
                                 <div className="flex justify-between text-sm text-gray-700">
                                     <div className="flex items-center gap-2 xl:mt-0 mt-2">
                                         <div className="relative flex items-center">
-                                            <span className="absolute left-2 text-black hover:text-gray-800">₹</span>
+                                            <span className="absolute left-2 text-black hover:text-[#666769]">₹</span>
                                             <input
                                                 type="number"
                                                 className="pl-6 pr-2 py-1 border border-gray-300 rounded-md w-20 text-center"
                                             />
                                         </div>
-                                        <span className="text-sm text-black hover:text-gray-800">to</span>
+                                        <span className="text-sm text-black hover:text-[#666769]">to</span>
                                         <div className="relative flex items-center">
-                                            <span className="absolute left-2 text-black hover:text-gray-800">₹</span>
+                                            <span className="absolute left-2 text-black hover:text-[#666769]">₹</span>
                                             <input
                                                 type="number"
                                                 className="pl-6 pr-2 py-1 border border-gray-300 rounded-md w-20 text-center"
@@ -145,14 +144,14 @@ function Filters() {
                 </div>
                 <div className='xl:mt-0 mt-6'>
                     <div className="flex justify-between items-center cursor-pointer" onClick={() => setToggleWidth(!toggleWidth)}>
-                        <p className="xl:text-xl text-md font-semibold font-montserrat text-black hover:text-gray-800">Width</p>
+                        <p className="xl:text-xl text-md font-semibold font-montserrat text-black hover:text-[#666769]">Width</p>
                         <Icon icon={toggleWidth ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-black" />
                     </div>
                     {toggleWidth && (
                         width.map(item => (
                             <div key={item.id} className="flex gap-3 items-center">
                                 <input type="checkbox" className="h-5 w-5" />
-                                <div className="text-base xl:text-lg text-black font-montserrat font-normal hover:text-gray-800">
+                                <div className="text-base xl:text-lg text-black font-montserrat font-normal hover:text-[#666769]">
                                     {item.title}
                                 </div>
                             </div>
@@ -162,14 +161,14 @@ function Filters() {
                 </div>
                 <div className='xl:mt-0 mt-6'>
                     <div className="flex justify-between items-center cursor-pointer" onClick={() => setToggleGemstone(!toggleGemstone)}>
-                        <p className="xl:text-xl text-md font-semibold font-montserrat text-black hover:text-gray-800">Gemstone</p>
+                        <p className="xl:text-xl text-md font-semibold font-montserrat text-black hover:text-[#666769]">Gemstone</p>
                         <Icon icon={toggleGemstone ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-black" />
                     </div>
                     {toggleGemstone && (
                         gemstone.map(item => (
                             <div key={item.id} className="flex gap-3 items-center">
                                 <input type="checkbox" className="h-5 w-5" />
-                                <div className="text-base xl:text-lg text-black hover:text-gray-800 font-montserrat font-normal">
+                                <div className="text-base xl:text-lg text-black hover:text-[#666769] font-montserrat font-normal">
                                     {item.title}
                                 </div>
                             </div>
@@ -178,14 +177,14 @@ function Filters() {
                 </div>
                 <div className='xl:mt-0 mt-6'>
                     <div className="flex justify-between items-center cursor-pointer" onClick={() => setToggleEngravable(!toggleEngravable)}>
-                        <p className="xl:text-xl text-md font-semibold font-montserrat text-black] hover:text-gray-800">Engravable</p>
-                        <Icon icon={toggleEngravable ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-black hover:text-gray-800" />
+                        <p className="xl:text-xl text-md font-semibold font-montserrat text-black] hover:text-[#666769]">Engravable</p>
+                        <Icon icon={toggleEngravable ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-black hover:text-[#666769]" />
                     </div>
                     {toggleEngravable && (
                         engravable.map(item => (
                             <div key={item.id} className="flex gap-3 items-center">
                                 <input type="checkbox" className="h-5 w-5" />
-                                <div className="text-base xl:text-lg text-black hover:text-gray-800 font-montserrat font-normal">
+                                <div className="text-base xl:text-lg text-black hover:text-[#666769] font-montserrat font-normal">
                                     {item.title}
                                 </div>
                             </div>

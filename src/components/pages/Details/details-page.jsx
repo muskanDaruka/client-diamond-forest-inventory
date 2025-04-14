@@ -1,7 +1,7 @@
 "use client";
 // import { EmblaOptionsType } from "embla-carousel";
 import React, { useState } from "react";
-import img1 from "../../../../public/images/bracelet/bracelet-1.png";
+import img1 from "../../../../public/images/bracelet/bracelet.png";
 // import img2 from "@/../public/images/engagement/ring12.jpg";
 // import img3 from "@/../public/images/categories/ring.jpg";
 // import ProductDetailSlider from "./ProductDetailSlider";
@@ -24,6 +24,9 @@ import MetalType from "./MetalType";
 import { FaArrowLeft } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Selector from "./Selector";
+import yellow from '../../../../public/images/filter/yellow-gold.png'
+import rose from '../../../../public/images/filter/rose-gold.png'
+import white from '../../../../public/images/filter/white-gold.png'
 
 // const OPTIONS = {};
 
@@ -41,9 +44,9 @@ const ProductDetail = () => {
   ];
 
   const metalTypes = [
-    { id: 1, colorCode: "#deddde", text: "14K", title: "White gold" },
-    { id: 2, colorCode: "#ffe998", text: "14K", title: "Yellow gold" },
-    { id: 3, colorCode: "#ecc5c0", text: "14K", title: "Rose gold" },
+    { id: 1, img: white, text: "14K", title: "White gold" },
+    { id: 2, img: yellow, text: "14K", title: "Yellow gold" },
+    { id: 3, img: rose, text: "14K", title: "Rose gold" },
   ];
 
   const shapes = [
@@ -98,68 +101,85 @@ const ProductDetail = () => {
           <FaArrowLeft size={22} />
         </button>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-8 gap-2 font-montserrat px-6 pb-6 cursor-pointer">
-      <div
-  className="relative w-full h-auto overflow-hidden cursor-crosshair"
-  onMouseEnter={() => setIsZoomed(true)}
-  onMouseLeave={() => setIsZoomed(false)}
->
-  <div className="relative w-full h-auto">
-    <Image
-      src={img1}
-      alt="Product Image"
-      width={400}
-      height={400}
-      className={`
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 xl:gap-8 gap-2 font-montserrat xl:px-6 md:px-4 px-2 pb-6 cursor-pointer">
+        <div
+          className="relative w-full h-auto overflow-hidden cursor-crosshair"
+          onMouseEnter={() => setIsZoomed(true)}
+          onMouseLeave={() => setIsZoomed(false)}
+        >
+          <div className="relative w-full h-auto">
+            <Image
+              src={img1}
+              alt="Product Image"
+              width={400}
+              height={400}
+              className={`
         object-cover w-full h-auto rounded-md transition-transform duration-300
         ${isZoomed ? "scale-150" : "scale-100"}
       `}
-      style={{ transformOrigin: "center center" }}
-    />
-  </div>
-</div>
+              style={{ transformOrigin: "center center" }}
+            />
+          </div>
+        </div>
         <div className="space-y-4">
-          <h1 className="xl:text-2xl text-xl font-semibold text-white hover:text-gray-800">
-            Emerald Eternity Ring
+          <h1 className="xl:text-2xl md:text-base text-xl font-semibold text-white hover:text-[#666769]">
+            Emerald East - West Bracelet
           </h1>
-          <p className="text-sm text-white hover:text-gray-800">
+          <p className="text-sm text-white hover:text-[#666769]">
             14K White Gold, FG, VS2+ | IGI Certified, 14 Emerald stone
           </p>
-          <h2 className="xl:text-xl text-lg font-semibold text-white hover:text-gray-800">$2,350.00</h2>
-          <button className="bg-gray-800 xl:text-lg text-md font-medium px-6 py-2 rounded-md shadow-md text-white hover:bg-gray-500 transition">
-            Add to cart
+          <div className="flex">
+            <h2 className="xl:text-xl md:text-base text-lg font-semibold text-white hover:text-[#666769]">$2,350.00</h2>
+            <span className="text-white md:text-base xl:text-xl text-lg line-through ml-2 hover:text-[#666769] cursor-pointer">$4000</span>
+          </div>
+          <button className="bg-[#666769] xl:text-lg md:text-base text-md font-medium px-6 py-2 rounded-md shadow-md text-white hover:bg-gray-500 transition">
+            SHOP
           </button>
           <div className="">
-            <h1 className="font-bold mb-1 text-white">Metal Type:</h1>
+            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Metal Type:</h1>
             <div className="flex gap-4">
               <MetalType metalType={metalTypes} />
             </div>
           </div>
           <div className="">
-            <h1 className="font-bold mb-1 text-white">Shape:</h1>
+            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Shape:</h1>
             <div className="flex flex-wrap gap-2">
               {shapes.map((shape) => (
-                <label key={shape.id} className="relative">
+                <label key={shape.id} className="relative flex flex-col items-center w-16 text-center">
                   <input
                     type="checkbox"
                     className="hidden"
                     checked={selectedShape.includes(shape.id)}
                     onChange={() => toggleShape(shape.id)}
                   />
-                  <div className={`xl:w-10 xl:h-10 w-8 h-8 rounded-full bg-white p-1 flex items-center justify-center transition ${selectedShape.includes(shape.id) ? "border border-white rounded-md p-1" : "border"
-                    }`}>
-                    <Image src={shape.img.src} alt={shape.alt} width={200} height={400} className="w-full h-full object-contain" />
+                  <div
+                    className={`xl:w-14 xl:h-14 w-8 h-8 rounded-full bg-white p-0 flex items-center justify-center transition ${selectedShape.includes(shape.id)
+                      ? "border border-white rounded-md p-1"
+                      : "border"
+                      }`}
+                  >
+                    <Image
+                      src={shape.img.src}
+                      alt={shape.alt}
+                      width={200}
+                      height={400}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
+                  <span className="text-xs mt-1 text-white break-words leading-tight max-w-[3.5rem] hover:text-[#666769]">
+                    {shape.alt}
+                  </span>
                 </label>
               ))}
             </div>
           </div>
+
           <div className="w-full">
-            <h1 className="font-bold mb-1 text-white">Color:</h1>
+            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Color:</h1>
             <Selector options={colors} customClass="" />
           </div>
           <div className="">
-            <h1 className="font-bold mb-1 text-white">Carat Weight:</h1>
+            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Carat Weight:</h1>
             <div className="flex gap-2">
               {caratWeights.map((carat) => (
                 <label key={carat} className="relative">
@@ -178,7 +198,7 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="mt-6">
-            <h1 className="font-bold mb-1 text-white">Diamond Quality:</h1>
+            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Diamond Quality:</h1>
             <div className="grid grid-cols-3 gap-2">
               {diamondQuality.map((quality) => (
                 <label key={quality} className="relative">
@@ -197,17 +217,17 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="mt-6">
-            <h1 className="font-bold mb-1 text-white">Bracelet Size (In Inches)</h1>
+            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Bracelet Size (In Inches)</h1>
             <select className="w-full p-2 border rounded-md text-white">
-              <option className="text-black">Select</option>
+              <option className="text-black hover:text-[#666769]">Select</option>
               {["4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8"].map((size) => (
                 <option key={size} className="text-black">{size}</option>
               ))}
             </select>
-            <button className="mt-2 text-sm text-blue-600 underline">Size Guide</button>
+            <button className="mt-2 text-sm text-blue-600 underline hover:text-[#666769]">Size Guide</button>
           </div>
           <div className="mt-6">
-            <h1 className="font-bold mb-1 text-white">+ Add Engraving</h1>
+            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">+ Add Engraving</h1>
             <input type="text" placeholder="Type your message" className="w-full p-2 border rounded-md text-white" />
           </div>
         </div>
