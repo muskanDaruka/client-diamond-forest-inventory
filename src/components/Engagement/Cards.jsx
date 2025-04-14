@@ -123,7 +123,7 @@ const Cards = () => {
         { id: 4, src: "/images/bracelet/bracelet-4.png", title: "Oval Bracelet" },
     ];
     return (
-        <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-5">
             {cardList.map((item) => (
                 <div
                     key={item.id}

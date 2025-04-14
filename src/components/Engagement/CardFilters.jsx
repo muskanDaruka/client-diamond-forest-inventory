@@ -49,7 +49,7 @@ function CardFilters({ metalType, shape, carat }) {
         <div className="container space-y-3 md:space-y-5">
             <div className="flex flex-col space-y-3 md:space-y-5">
                 {[{ title: 'Metal', items: metalType }, { title: 'Shape', items: shape }, { title: 'Carat', items: carat }].map(({ title, items }) => (
-                    <div key={title} className="flex flex-col md:flex-row items-center md:items-start mt-2 cursor-pointer">
+                    <div key={title} className="flex flex-row md:flex-row items-center md:items-start mt-2 cursor-pointer">
                         <h3 className="xl:text-lg text-xs text-white hover:text-[#666769]">{title}</h3>
                         <div className="flex justify-around items-center w-full">
                             <button
@@ -90,7 +90,7 @@ function CardFilters({ metalType, shape, carat }) {
                                             </div>
                                         ) : title === 'Shape' && 'img' in item ? (
                                             <div className={`xl:w-10 md:w-8 w-6 flex items-center  justify-center ${selected[title] === item.id ? 'p-1  border border-white' : 'hover:border hover:border-white'}`}>
-                                                <Image src={item.img} alt={item.alt || ''} className="w-full bg-white rounded-full" />
+                                                <Image src={item.img} alt={item.alt || ''} className="xl:w-full bg-white rounded-full" />
                                             </div>
                                         ) : title === 'Carat' && 'text' in item ? (
                                             <div
