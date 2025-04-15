@@ -13,7 +13,10 @@ const fadeIn = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
-
+const fadeLeft = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+};
 const Home = () => {
   return (
     <div className="flex flex-col">
@@ -76,7 +79,11 @@ const Home = () => {
         <div className="border border-[#222220] p-2">
           <div className="border border-[#222220] p-6">
             <div className="text-center">
-              <h2
+              <motion.h2
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                variants={fadeLeft}
                 className="text-3xl md:text-3xl xl:text-4xl italic font-normal mb-8 text-[#323232]"
                 style={{
                   fontFamily:
@@ -84,13 +91,17 @@ const Home = () => {
                 }}
               >
                 Our Commitment to Quality, Trust & Partnership
-              </h2>
+              </motion.h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
-              <p className="font-justify text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn} className="font-justify text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 Our focus is on building strong relationships, offering reliable service, and ensuring that our jewelry meets the highest standards of beauty and quality.
-              </p>
+              </motion.p>
 
               <Image
                 src={blog}
@@ -98,9 +109,13 @@ const Home = () => {
                 className="object-contain rounded-md max-w-xs w-full h-auto"
               />
 
-              <p className="font-justify text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn} className="font-justify text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 Whether you are a retailer, wholesaler, or designer, we are here to provide the perfect diamond jewelry solutions tailored to your business needs.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
