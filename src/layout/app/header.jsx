@@ -10,7 +10,7 @@ function Header() {
   const route = [
     { id: 1, label: "INVENTORY", path: "#" },
     { id: 2, label: "HOME", path: "/" },
-    { id: 3, label: "GET IN TOUCH", path: "#" },
+    { id: 3, label: "GET IN TOUCH", path: "/contact" },
     { id: 4, label: "MY ACCOUNT", path: "#" },
     // { id: 5, label: "Pendants", path: "#" },
   ];

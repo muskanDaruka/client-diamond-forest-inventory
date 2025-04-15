@@ -26,7 +26,7 @@ function OurProduct() {
   ];
 
   return (
-    <div className="w-full px-4 font-montserrat relative pt-4 pb-4">
+    <div className="w-full px-4 font-montserrat relative pt-4 pb-4 min-h-screen grid place-items-center">
       <Image
         src={background}
         alt="background Image"
@@ -40,7 +40,7 @@ function OurProduct() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       variants={fadeLeft}
-       className="relative xl:text-5xl text-xl text-black font-medium mb-6 text-center mt-4 italic text-start ml-8"
+       className="relative xl:text-5xl text-xl text-black font-medium mb-6 mt-4 italic text-start ml-8"
       style={{ fontFamily: '"Georgia Pro", "Georgia", "Constantia", "Palatino Linotype", "Book Antiqua", "Times New Roman", "serif"' }}
       >
         Our Products

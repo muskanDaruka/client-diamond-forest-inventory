@@ -18,7 +18,7 @@ function Page() {
     const [inStock, setInStock] = useState(false);
     const list = [
         "TIMELESS | EVERYDAYWEAR",
-        "Exotic | OCCASSIONAL",
+        "EXOTIC | OCCASSIONAL",
         "HIGH JEWELRY"
     ]
     return (

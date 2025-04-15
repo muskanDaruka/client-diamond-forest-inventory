@@ -93,7 +93,7 @@ const ProductDetail = () => {
 
   return (
     <div className="bg-black">
-      <div className="xl:pt-32 pt-24 xl:px-8 px-4 cursor-pointer ">
+      <div className="xl:pt-32 pt-24 xl:px-8 px-4 cursor-pointer">
         <button
           onClick={() => back()}
           className="m-2 text-xl border-0 flex items-center font-serif text-white"
@@ -107,7 +107,7 @@ const ProductDetail = () => {
           onMouseEnter={() => setIsZoomed(true)}
           onMouseLeave={() => setIsZoomed(false)}
         >
-          <div className="relative w-full h-auto">
+          <div className="relative w-full h-auto p-6">
             <Image
               src={img1}
               alt="Product Image"
@@ -121,7 +121,7 @@ const ProductDetail = () => {
             />
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 p-2">
           <h1 className="xl:text-2xl md:text-base text-xl font-semibold text-white hover:text-[#666769]">
             Emerald East - West Bracelet
           </h1>
@@ -154,7 +154,7 @@ const ProductDetail = () => {
                   />
                   <div
                     className={`xl:w-14 xl:h-14 w-8 h-8 rounded-full bg-white p-0 flex items-center justify-center transition ${selectedShape.includes(shape.id)
-                      ? "border border-white rounded-md p-1"
+                      ? "border border-white rounded-md"
                       : "border"
                       }`}
                   >
@@ -208,7 +208,7 @@ const ProductDetail = () => {
                     checked={selectedQuality.includes(quality)}
                     onChange={() => toggleQuality(quality)}
                   />
-                  <div className={`px-3 py-1 border rounded-md transition text-white ${selectedQuality.includes(quality) ? "border bg-gray-300" : "border-white "
+                  <div className={`px-3 py-1 border rounded-md transition  ${selectedQuality.includes(quality) ? "border bg-gray-300 text-black" : "border-white text-white"
                     }`}>
                     {quality}
                   </div>

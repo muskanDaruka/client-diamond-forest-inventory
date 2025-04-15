@@ -1,20 +1,29 @@
 "use client";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
+import footer from '../../../public/images/Home/contact-footer.png'
+import Image from "next/image";
 
 function Footer() {
     return (
-        <footer className="bg-[#323232] text-white px-6 py-10 lg:px-20 lg:py-14 cursor-pointer" 
+        <footer className="bg-[#323232] text-white cursor-pointer"
             style={{ fontFamily: 'var(--font-montserrat)' }}
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
-                    <p className="text-2xl lg:text-3xl font-semibold italic font-montserrat leading-relaxed hover:text-gray-400"
+                    <p className="text-2xl lg:text-3xl font-semibold italic font-montserrat leading-relaxed hover:text-gray-400 px-6 py-10 xl:px-20 xl:py-14"
                         style={{ fontFamily: 'Georgia Pro, serif' }}
                     >
                         Contact us for inquiries and partnerships.
                     </p>
+                    <Image
+                        src={footer}
+                        alt="footer"
+                        width={400}
+                        height={100}
+                        className="relative w-full h-auto max-w-xl md:max-w-md lg:max-w-lg xl:min-w-2xl object-contain"
+                    />
                 </div>
-                <div className="space-y-5 ">
+                <div className="space-y-5 px-6 py-10 xl:px-20 xl:py-14">
                     <div>
                         <h4 className="text-2xl font-semibold font-montserrat hover:text-gray-400">Address</h4>
                         <p className="text-md font-montserrat hover:text-gray-400">123 Anywhere St, Any City, ST 12345</p>

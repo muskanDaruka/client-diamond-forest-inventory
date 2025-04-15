@@ -6,6 +6,8 @@ import story from '../../public/images/story/About.png';
 import Image from "next/image";
 import OurProduct from "@/components/OurProductSection";
 import background from "../../public/images/Home/background.png";
+import blog from '../../public/images/Home/blog-forest.png'
+import backgroundForest from '../../public/images/Home/jewelry-bg.png'
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
@@ -70,6 +72,60 @@ const Home = () => {
       <section>
         <OurProduct />
       </section>
+      <section className="relative bg-[#e6e5db] min-h-screen py-24 px-8">
+        <div className="border border-[#222220] p-2">
+          <div className="border border-[#222220] p-6">
+            <div className="text-center">
+              <h2
+                className="text-3xl md:text-3xl xl:text-4xl italic font-normal mb-8 text-[#323232]"
+                style={{
+                  fontFamily:
+                    '"Georgia Pro", "Georgia", "Constantia", "Palatino Linotype", "Book Antiqua", "Times New Roman", "serif"',
+                }}
+              >
+                Our Commitment to Quality, Trust & Partnership
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+              <p className="font-justify text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                Our focus is on building strong relationships, offering reliable service, and ensuring that our jewelry meets the highest standards of beauty and quality.
+              </p>
+
+              <Image
+                src={blog}
+                alt="Blog"
+                className="object-contain rounded-md max-w-xs w-full h-auto"
+              />
+
+              <p className="font-justify text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                Whether you are a retailer, wholesaler, or designer, we are here to provide the perfect diamond jewelry solutions tailored to your business needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section>
+        <div className='relative h-screen'>
+          <div className="absolute inset-0 -z-10">
+            <Image
+              src={backgroundForest}
+              alt="background Image"
+              layout="fill"
+              objectFit="fill"
+              priority
+            />
+            <div className="relative grid place-items-center m-4">
+              <h2 className="text-white italic text-5xl" style={{ fontFamily: 'Majesty, Elegant, Script, Luxury, cursive' }}>Jewelry Care</h2>
+              <p className="text-white text-3xl mt-3" style={{ fontFamily: 'var(--font-montserrat)' }}>How should you take care of your jewelry</p>
+            </div>
+            <div className="grid grid-cols-5">
+              <
+
+            </div>
+          </div>
+        </div>
+      </section> */}
     </div>
   );
 };
