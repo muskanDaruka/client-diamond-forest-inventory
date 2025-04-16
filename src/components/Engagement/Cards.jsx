@@ -102,8 +102,8 @@ const Cards = () => {
 
                     <div className='grid grid-cols-2 w-full'>
                         <div className="w-full mt-5">
-                            <span className="font-semibold xl:text-lg md:text-md text-sm text-white hover:text-[#666769] cursor-pointer">₹1,424</span>
-                            <span className="text-white xl:text-sm text-xs line-through ml-2 hover:text-[#666769] cursor-pointer">₹1,499</span>
+                            <span className="font-semibold xl:text-lg md:text-md text-sm text-white hover:text-[#666769] cursor-pointer">$1,424</span>
+                            <span className="text-white xl:text-sm text-xs line-through ml-2 hover:text-[#666769] cursor-pointer">$1,499</span>
                         </div>
                         <div className='flex items-center justify-center mt-5 gap-5'>
                             <div onClick={() => toggleLike(item.id)} className="cursor-pointer">

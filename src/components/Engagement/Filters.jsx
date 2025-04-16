@@ -73,7 +73,7 @@ function Filters() {
                                             className="hidden"
                                         />
                                         <div
-                                            className={`rounded-full border h-14 w-14 flex items-center justify-center ${selectedMetals.includes(item.id) ? 'border-white border-2' : 'border-gray-300'}`}
+                                            className={`rounded-full border h-14 w-14 flex items-center justify-center ${selectedMetals.includes(item.id) ? 'border-black border-2' : 'border-gray-300'}`}
                                             style={{ backgroundColor: item.colorCode }}
                                         ></div>
                                         <div className="xl:text-md text-sm text-black text-center mt-1 hover:text-[#666769]">{item.title}</div>
@@ -122,7 +122,7 @@ function Filters() {
                                 <div className="flex justify-between text-sm text-gray-700">
                                     <div className="flex items-center gap-2 xl:mt-0 mt-2">
                                         <div className="relative flex items-center">
-                                            <span className="absolute left-2 text-black hover:text-[#666769]">₹</span>
+                                            <span className="absolute left-2 text-black hover:text-[#666769]">$</span>
                                             <input
                                                 type="number"
                                                 className="pl-6 pr-2 py-1 border border-gray-300 rounded-md w-20 text-center"
@@ -130,7 +130,7 @@ function Filters() {
                                         </div>
                                         <span className="text-sm text-black hover:text-[#666769]">to</span>
                                         <div className="relative flex items-center">
-                                            <span className="absolute left-2 text-black hover:text-[#666769]">₹</span>
+                                            <span className="absolute left-2 text-black hover:text-[#666769]">$</span>
                                             <input
                                                 type="number"
                                                 className="pl-6 pr-2 py-1 border border-gray-300 rounded-md w-20 text-center"

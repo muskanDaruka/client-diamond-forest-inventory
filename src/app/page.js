@@ -78,8 +78,8 @@ const Home = () => {
         <OurProduct />
       </section>
       <section className="relative bg-[#e6e5db] min-h-screen py-24 px-8">
-        <div className="border border-[#222220] p-2">
-          <div className="border border-[#222220] p-6">
+        <div className="border border-gray-400 p-2">
+          <div className="border border-gray-300 p-6">
             <div className="text-center">
               <motion.h2
                 initial={{ opacity: 0, y: -30 }}
@@ -96,7 +96,6 @@ const Home = () => {
                 Our Commitment to Quality, Trust & Partnership
               </motion.h2>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center ">
               <motion.p
                 initial="hidden"
@@ -105,13 +104,11 @@ const Home = () => {
                 variants={fadeIn} className="font-justify text-sm md:text-base xl:text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 Our focus is on building strong relationships, offering reliable service, and ensuring that our jewelry meets the highest standards of beauty and quality.
               </motion.p>
-
               <Image
                 src={blog}
                 alt="Blog"
                 className="object-contain rounded-md max-w-xs w-full h-auto"
               />
-
               <motion.p
                 initial="hidden"
                 whileInView="visible"

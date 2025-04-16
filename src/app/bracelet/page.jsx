@@ -11,6 +11,7 @@ import Filters from "@/components/Engagement/Filters";
 import HorizontalList from "@/components/HorizontalList";
 import { FaArrowLeft } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import { MdOutlineSort } from "react-icons/md";
 
 function Page() {
     const { back } = useRouter();
@@ -36,41 +37,42 @@ function Page() {
                     <HorizontalList data={list} />
                 </div>
                 <div className="relative flex justify-center items-center mt-4 cursor-pointer hidden lg:block m-8 ">
-                    
+
                     <div className="flex justify-between items-center gap-4">
-                    <h2 className="text-white text-3xl xl:mt-4 mt-4">BRACELETS</h2>
-                    <div className="flex justify-end items-center gap-4">
-                        <div className="flex items-center gap-3 xl:mt-4 mt-4 border">
-                            <select className="bg-white text-black">
-                                <option value="" className="xl:text-2xl text-md font-medium" defaultValue="">
-                                    Sort By
-                                </option>
-                                <option value="Best Sellers">Best Sellers</option>
-                                <option value="Newest">Newest</option>
-                                <option value="Price: Low to High">Price: Low to High</option>
-                                <option value="Price: High to Low">Price: High to Low</option>
-                            </select>
-                        </div>
-                        <div className="flex items-center xl:mt-4 mt-4 gap-2">
-                            <input
-                                type="checkbox"
-                                id="inStock"
-                                checked={inStock}
-                                onChange={() => setInStock(!inStock)}
-                                className="cursor-pointer rounded-full w-5 h-5"
-                            />
-                            <label htmlFor="inStock" className="xl:text-2xl text-white hover:text-[#666769] text-md font-medium cursor-pointer">
-                                InStock
-                            </label>
-                        </div>
-                        <div>
-                            <div className="flex items-center gap-3 p-1" onClick={() => setIsOpen(!isOpen)}>
-                                <h3 className="xl:text-2xl text-md font-medium text-white hover:text-[#666769] xl:mt-4 mt-4">
-                                    Filter
-                                </h3>
-                                <TbAdjustmentsHorizontal size={25} className="text-white hover:text-[#666769] xl:mt-4 mt-4" />
+                        <h2 className="text-white text-3xl xl:mt-4 mt-4">BRACELETS</h2>
+                        <div className="flex justify-end items-center gap-4">
+                            <div className="flex items-center gap-3 xl:mt-4 mt-4 px-4 py-2 rounded-md">
+                                <select className="bg-white text-black border-none outline-none xl:text-2xl text-md font-medium px-2 py-1 rounded-md">
+                                    <option value="" disabled>
+                                        Sort By
+                                    </option>
+                                    <option value="Best Sellers">Best Sellers</option>
+                                    <option value="Newest">Newest</option>
+                                    <option value="Price: Low to High">Price: Low to High</option>
+                                    <option value="Price: High to Low">Price: High to Low</option>
+                                </select>
                             </div>
-                        </div>
+
+                            <div className="flex items-center xl:mt-4 mt-4 gap-2">
+                                <input
+                                    type="checkbox"
+                                    id="inStock"
+                                    checked={inStock}
+                                    onChange={() => setInStock(!inStock)}
+                                    className="cursor-pointer rounded-full w-5 h-5"
+                                />
+                                <label htmlFor="inStock" className="xl:text-2xl text-white hover:text-[#666769] text-md font-medium cursor-pointer">
+                                    InStock
+                                </label>
+                            </div>
+                            <div>
+                                <div className="flex items-center gap-3 p-1" onClick={() => setIsOpen(!isOpen)}>
+                                    <h3 className="xl:text-2xl text-md font-medium text-white hover:text-[#666769] xl:mt-4 mt-4">
+                                        Filter
+                                    </h3>
+                                    <TbAdjustmentsHorizontal size={25} className="text-white hover:text-[#666769] xl:mt-4 mt-4" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -100,7 +102,7 @@ function Page() {
                             <Filters />
                         </section>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center gap-1 ml-2">
                         <input
                             type="checkbox"
                             id="inStock"
@@ -110,9 +112,10 @@ function Page() {
                         />
                         <label htmlFor="inStock" className="text-white font-medium cursor-pointer">InStock</label>
                     </div>
-                    <div className="flex items-center gap-3 border">
-                        <select className="bg-white text-black">
-                            <option value="" className="xl:text-2xl text-md font-medium" defaultValue="">
+                    <div className="flex items-center gap-3 mt-0 px-4 py-2 rounded-md">
+
+                        <select className="bg-white text-black border-none outline-none text-sm font-medium px-2 py-0 rounded-md">
+                            <option value="" disabled>
                                 Sort By
                             </option>
                             <option value="Best Sellers">Best Sellers</option>
@@ -120,6 +123,7 @@ function Page() {
                             <option value="Price: Low to High">Price: Low to High</option>
                             <option value="Price: High to Low">Price: High to Low</option>
                         </select>
+
                     </div>
                 </div>
                 <div className="w-full relative">
