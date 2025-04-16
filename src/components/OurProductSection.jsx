@@ -16,7 +16,10 @@ const fadeLeft = {
 };
 
 function OurProduct() {
-
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
   const categoryImages = [
     { img: earring, alt: "EARRING" },
     { img: ring, alt: "RING" },
@@ -57,9 +60,14 @@ function OurProduct() {
                 />
               </Link>
             </div>
-            <h1 className="relative text-center xl:text-xl mt-3 font-bold text-[#323232]">
+            <motion.h1
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false}}
+                            variants={fadeIn} 
+                            className="relative text-center xl:text-xl mt-3 font-bold text-[#323232]">
               {item.alt}
-            </h1>
+            </motion.h1>
           </div>
         ))}
       </div>

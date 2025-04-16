@@ -7,7 +7,8 @@ import Image from "next/image";
 import OurProduct from "@/components/OurProductSection";
 import background from "../../public/images/Home/background.png";
 import blog from '../../public/images/Home/blog-forest.png'
-import backgroundForest from '../../public/images/Home/jewelry-bg.png'
+import backgroundForest from '../../public/images/Home/jewellery-icon.png'
+import JewelleryCare from "@/components/JewelleryCare";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
@@ -34,11 +35,11 @@ const Home = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false}}
           variants={fadeIn}
           className="relative flex xl:flex-row flex-col xl:justify-around justify-center items-center p-4 h-screen"
         >
-          <motion.div variants={fadeIn}>
+          <motion.div variants={fadeIn} viewport={false}>
             <Image
               src={story}
               alt="Our Story"
@@ -49,6 +50,7 @@ const Home = () => {
           </motion.div>
           <motion.p
             variants={fadeIn}
+            viewport={{ once: false}}
             className="relative text-xl xl:text-3xl font-medium italic font-montserrat leading-relaxed"
             style={{ fontFamily: "Public Sans, sans" }}
           >
@@ -83,6 +85,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+                viewport={{ once: false }}
                 variants={fadeLeft}
                 className="text-3xl md:text-3xl xl:text-4xl italic font-normal mb-8 text-[#323232]"
                 style={{
@@ -94,12 +97,12 @@ const Home = () => {
               </motion.h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center ">
               <motion.p
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn} className="font-justify text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                viewport={{ once: false}}
+                variants={fadeIn} className="font-justify text-sm md:text-base xl:text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 Our focus is on building strong relationships, offering reliable service, and ensuring that our jewelry meets the highest standards of beauty and quality.
               </motion.p>
 
@@ -112,35 +115,17 @@ const Home = () => {
               <motion.p
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn} className="font-justify text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                viewport={{ once: false}}
+                variants={fadeIn} className="font-justify text-sm md:text-base xl:text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 Whether you are a retailer, wholesaler, or designer, we are here to provide the perfect diamond jewelry solutions tailored to your business needs.
               </motion.p>
             </div>
           </div>
         </div>
       </section>
-      {/* <section>
-        <div className='relative h-screen'>
-          <div className="absolute inset-0 -z-10">
-            <Image
-              src={backgroundForest}
-              alt="background Image"
-              layout="fill"
-              objectFit="fill"
-              priority
-            />
-            <div className="relative grid place-items-center m-4">
-              <h2 className="text-white italic text-5xl" style={{ fontFamily: 'Majesty, Elegant, Script, Luxury, cursive' }}>Jewelry Care</h2>
-              <p className="text-white text-3xl mt-3" style={{ fontFamily: 'var(--font-montserrat)' }}>How should you take care of your jewelry</p>
-            </div>
-            <div className="grid grid-cols-5">
-              <
-
-            </div>
-          </div>
-        </div>
-      </section> */}
+      <section>
+        <JewelleryCare/>
+      </section>
     </div>
   );
 };
