@@ -40,7 +40,7 @@ const VideoSection = () => {
           />
           <div className="absolute bottom-4 sm:bottom-6 w-full flex justify-center px-4">
             <p
-              className="text-3xl md:text-4xl xl:text-5xl text-black text-center font-medium "
+              className="text-3xl md:text-4xl xl:text-6xl text-black text-center font-medium "
               style={{
                 fontFamily: 'Burgues Script, Edwardian Script ITC, cursive',
               }}
