@@ -39,12 +39,12 @@ function OurProduct() {
         priority
       />
       <motion.h2
-      initial={{ opacity: 0, y: -30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      variants={fadeLeft}
-       className="relative xl:text-5xl text-xl text-black font-medium mb-6 mt-4 italic text-start ml-8"
-      style={{ fontFamily: '"Georgia Pro", "Georgia", "Constantia", "Palatino Linotype", "Book Antiqua", "Times New Roman", "serif"' }}
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        variants={fadeLeft}
+        className="relative xl:text-5xl text-xl text-black font-medium mb-6 mt-4 italic text-start ml-8"
+        style={{ fontFamily: '"Georgia Pro", "Georgia"' }}
       >
         Our Products
       </motion.h2>
@@ -61,11 +61,11 @@ function OurProduct() {
               </Link>
             </div>
             <motion.h1
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false}}
-                            variants={fadeIn} 
-                            className="relative text-center xl:text-xl mt-3 font-bold text-[#323232]">
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false }}
+              variants={fadeIn}
+              className="relative text-center xl:text-xl mt-3 font-bold text-[#323232]">
               {item.alt}
             </motion.h1>
           </div>
