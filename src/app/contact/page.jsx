@@ -47,7 +47,7 @@ const ContactPage = () => {
                                         value={firstName}
                                         onChange={(e) => setFirstName(e.target.value)}
                                         placeholder="Enter your First Name"
-                                        className="w-full bg-white px-4 py-2 shadow focus:outline-none text-gray-700"
+                                        className="w-full bg-white px-4 py-2 shadow focus:outline-none font-medium"
                                     />
                                 </div>
                                 <div>
@@ -60,7 +60,7 @@ const ContactPage = () => {
                                         value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
                                         placeholder="Enter your Last Name"
-                                        className="w-full bg-white px-4 py-2 shadow focus:outline-none text-gray-700"
+                                        className="w-full bg-white px-4 py-2 shadow focus:outline-none font-medium"
                                     />
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ const ContactPage = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Enter your Email"
-                                    className="w-full bg-white px-4 py-2 shadow focus:outline-none text-gray-700"
+                                    className="w-full bg-white px-4 py-2 shadow focus:outline-none font-medium"
                                 />
                             </div>
                             <div>
@@ -87,7 +87,7 @@ const ContactPage = () => {
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                     placeholder="Write your message..."
-                                    className="w-full bg-white px-4 py-2 shadow focus:outline-none text-gray-700"
+                                    className="w-full bg-white px-4 py-2 shadow focus:outline-none font-medium"
                                 />
                             </div>
 
