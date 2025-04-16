@@ -27,7 +27,7 @@ const JewelleryCare = () => {
                     className='xl:object-fill md:object-fill object-contain'
                 />
             </div>
-            <div className="relative text-center py-12 px-4 md:px-12">
+            <div className="relative text-center py-4 px-4 md:px-12">
     <motion.h2
         className="text-white italic text-2xl md:text-4xl xl:text-5xl"
         style={{ fontFamily: 'Majesty, cursive' }}
