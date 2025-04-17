@@ -43,7 +43,7 @@ function OurProduct() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         variants={fadeLeft}
-        className="relative xl:text-5xl text-xl text-black font-medium mb-6 mt-4 italic text-start ml-8"
+        className="relative xl:text-5xl text-xl text-black font-medium mb-6 mt-4 italic text-start xl:ml-8"
         style={{ fontFamily: '"Georgia Pro", "Georgia"' }}
       >
         Our Products

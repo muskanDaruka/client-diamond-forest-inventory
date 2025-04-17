@@ -77,7 +77,7 @@ const Home = () => {
       <section>
         <OurProduct />
       </section>
-      <section className="relative bg-[#e6e5db] min-h-screen py-24 px-8">
+      <section className="relative bg-[#e6e5db] min-h-screen xl:py-36 md:py-8 py-8 px-8">
         <div className="border border-gray-400 p-2">
           <div className="border border-gray-300 p-6">
             <div className="text-center">
