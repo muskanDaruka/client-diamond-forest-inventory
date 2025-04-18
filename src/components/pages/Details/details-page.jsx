@@ -92,7 +92,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="bg-black">
+    <div className="bg-[#373941]">
       <div className="xl:pt-32 pt-24 xl:px-8 px-4 cursor-pointer">
         <button
           onClick={() => back()}
@@ -107,14 +107,14 @@ const ProductDetail = () => {
           onMouseEnter={() => setIsZoomed(true)}
           onMouseLeave={() => setIsZoomed(false)}
         >
-          <div className="relative w-full h-auto p-6">
+          <div className="relative w-full h-full p-6">
             <Image
               src={img1}
               alt="Product Image"
               width={400}
               height={400}
               className={`
-        object-cover w-full h-auto rounded-md transition-transform duration-300
+        object-cover w-full h-full rounded-md transition-transform duration-300
         ${isZoomed ? "scale-150" : "scale-100"}
       `}
               style={{ transformOrigin: "center center" }}

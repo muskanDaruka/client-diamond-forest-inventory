@@ -32,13 +32,13 @@ const ContactPage = () => {
             <div className="relative z-10 xl:pt-48 md:pt-24 pt-14 px-6 xl:px-20" style={{fontFamily:'var(--font-montserrat)'}}>
                 <div className="grid grid-cols-1 xl:grid-cols-2 md:grid-cols-2 xl:gap-10 inset-shadow-sm shadow-2xl xl:p-8 md:p-6 p-4">
                     <div className="xl:p-6 md:p-4 p-2">
-                        <h1 className="text-black text-2xl xl:text-4xl font-bold mb-6 hover:text-[#777678]">
+                        <h1 className="text-black text-2xl xl:text-4xl font-bold mb-6 hover:text-[#333333]">
                             Fill the form
                         </h1>
                         <form className="space-y-4" onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label htmlFor="firstName" className="block text-[#111c4f] font-medium mb-1">
+                                    <label htmlFor="firstName" className="block font-medium mb-1">
                                         First Name:
                                     </label>
                                     <input
@@ -51,7 +51,7 @@ const ContactPage = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="lastName" className="block text-[#111c4f] font-medium mb-1">
+                                    <label htmlFor="lastName" className="block font-medium mb-1">
                                         Last Name:
                                     </label>
                                     <input
@@ -65,7 +65,7 @@ const ContactPage = () => {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="email" className="block text-[#111c4f] font-medium mb-1">
+                                <label htmlFor="email" className="block font-medium mb-1">
                                     Email:
                                 </label>
                                 <input
@@ -78,7 +78,7 @@ const ContactPage = () => {
                                 />
                             </div>
                             <div>
-                                <label htmlFor="message" className="block text-[#111c4f] font-medium mb-1">
+                                <label htmlFor="message" className="block font-medium mb-1">
                                     Message:
                                 </label>
                                 <textarea
@@ -100,7 +100,7 @@ const ContactPage = () => {
                         </form>
                     </div>
                     <div className="space-y-6 text-black p-6">
-                        <h2 className="text-2xl xl:text-4xl font-bold hover:text-[#777678]">
+                        <h2 className="text-2xl xl:text-4xl font-bold hover:text-[#333333]">
                             GET IN TOUCH WITH US
                         </h2>
                         <p className="text-base xl:text-xl hover:text-[#777678]">

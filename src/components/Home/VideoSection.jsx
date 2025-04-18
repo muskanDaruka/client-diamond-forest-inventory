@@ -8,9 +8,9 @@ const VideoSection = () => {
 
   const videoSection = [
     { type: 'video', media: '/images/Home/Bracelets.mp4', description: 'Elevate your everyday', path:"/bracelet" },
-    { type: 'video', media: '/images/Home/Earrings.mp4', description: 'Style simplified' },
-    { type: 'video', media: '/images/Home/Necklace.mp4', description: 'Enhance everyday' },
-    { type: 'video', media: '/images/Home/Rings.mp4', description: 'Where style meets function' },
+    { type: 'video', media: '/images/Home/Earrings.mp4', description: 'Style simplified', path:"/bracelet" },
+    { type: 'video', media: '/images/Home/Necklace.mp4', description: 'Enhance everyday', path:"/bracelet" },
+    { type: 'video', media: '/images/Home/Rings.mp4', description: 'Where style meets function', path:"/bracelet" },
   ];
 
   return (
