@@ -68,7 +68,7 @@ const SignUp = () => {
                         </div>
                         <div>
                                 <label htmlFor="country" className="block text-sm font-semibold mb-2">
-                                    COUNTRY<span className="text-red-500">*</span>
+                                    Country<span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="text"
