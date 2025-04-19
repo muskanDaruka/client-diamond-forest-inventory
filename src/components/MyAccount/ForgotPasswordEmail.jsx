@@ -1,11 +1,14 @@
 "use client";
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
-const ForgetPassword = () => {
+const ForgotPasswordEmail = () => {
     const [email, setEmail] = useState('')
+    const router = useRouter()
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        router.push('/forgot-password-email/forgot-password')
     };
 
     return (
@@ -25,7 +28,7 @@ const ForgetPassword = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="Enter your Email"
-                                className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#323232]"
+                                className="w-full px-4 py-2 text-sm md:text-base xl:text-xl font-medium border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#323232]"
                             />
                         </div>
                         <div className="text-center">
@@ -33,7 +36,7 @@ const ForgetPassword = () => {
                                 type="submit"
                                 className="bg-[#323232] hover:bg-black text-white px-8 py-2 rounded-full font-medium transition duration-300"
                             >
-                                Reset Password
+                                SEND
                             </button>
                         </div>
                     </form>
@@ -43,4 +46,4 @@ const ForgetPassword = () => {
     )
 }
 
-export default ForgetPassword
+export default ForgotPasswordEmail

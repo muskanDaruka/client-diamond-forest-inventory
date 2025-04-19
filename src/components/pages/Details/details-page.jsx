@@ -74,21 +74,15 @@ const ProductDetail = () => {
   ];
 
   const toggleShape = (shapeId) => {
-    setSelectedShape((prev) =>
-      prev.includes(shapeId) ? prev.filter((id) => id !== shapeId) : [...prev, shapeId]
-    );
+    setSelectedShape(shapeId);
   };
 
-  const toggleCarat = (carat) => {
-    setSelectedCarat((prev) =>
-      prev.includes(carat) ? prev.filter((c) => c !== carat) : [...prev, carat]
-    );
+  const toggleCarat = (caratId) => {
+    setSelectedCarat(caratId);
   };
 
-  const toggleQuality = (quality) => {
-    setSelectedQuality((prev) =>
-      prev.includes(quality) ? prev.filter((q) => q !== quality) : [...prev, quality]
-    );
+  const toggleQuality = (qualityId) => {
+    setSelectedQuality(qualityId);
   };
 
   return (
@@ -132,9 +126,14 @@ const ProductDetail = () => {
             <h2 className="xl:text-xl md:text-base text-lg font-semibold text-white hover:text-[#666769]">$2,350.00</h2>
             <span className="text-white md:text-base xl:text-xl text-lg line-through ml-2 hover:text-[#666769] cursor-pointer">$4000</span>
           </div>
+          <div className="flex items-center gap-5">
           <button className="bg-[#666769] xl:text-lg md:text-base text-md font-medium px-6 py-2 rounded-md shadow-md text-white hover:bg-gray-500 transition">
-            SHOP
+            Add to Cart
           </button>
+          <button className="bg-[#666769] xl:text-lg md:text-base text-md font-medium px-6 py-2 rounded-md shadow-md text-white hover:bg-gray-500 transition">
+            Buy Now
+          </button>
+          </div>
           <div className="">
             <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Metal Type:</h1>
             <div className="flex gap-4">
@@ -147,13 +146,13 @@ const ProductDetail = () => {
               {shapes.map((shape) => (
                 <label key={shape.id} className="relative flex flex-col items-center w-16 text-center">
                   <input
-                    type="checkbox"
+                    type="radio"
                     className="hidden"
-                    checked={selectedShape.includes(shape.id)}
+                    checked={selectedShape === shape.id}
                     onChange={() => toggleShape(shape.id)}
                   />
                   <div
-                    className={`xl:w-14 xl:h-14 w-8 h-8 rounded-full bg-white p-0 flex items-center justify-center transition ${selectedShape.includes(shape.id)
+                    className={`xl:w-14 xl:h-14 w-8 h-8 rounded-full bg-white p-0 flex items-center justify-center transition ${selectedShape === shape.id
                       ? "border border-white rounded-md"
                       : "border"
                       }`}
@@ -181,17 +180,17 @@ const ProductDetail = () => {
           <div className="">
             <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Carat Weight:</h1>
             <div className="flex gap-2">
-              {caratWeights.map((carat) => (
-                <label key={carat} className="relative">
+              {caratWeights.map((caratId) => (
+                <label key={caratId} className="relative">
                   <input
-                    type="checkbox"
+                    type="radio"
                     className="hidden"
-                    checked={selectedCarat.includes(carat)}
-                    onChange={() => toggleCarat(carat)}
+                    checked={selectedCarat === caratId}
+                    onChange={() => toggleCarat(caratId)}
                   />
-                  <div className={`px-3 py-1 rounded-md transition text-white ${selectedCarat.includes(carat) ? "border " : "border-white"
+                  <div className={`px-3 py-1 rounded-md transition text-white ${selectedCarat === caratId ? "border " : "border-white"
                     }`}>
-                    {carat}
+                    {caratId}
                   </div>
                 </label>
               ))}
@@ -200,17 +199,17 @@ const ProductDetail = () => {
           <div className="mt-6">
             <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Diamond Quality:</h1>
             <div className="grid grid-cols-3 gap-2">
-              {diamondQuality.map((quality) => (
-                <label key={quality} className="relative">
+              {diamondQuality.map((qualityId) => (
+                <label key={qualityId} className="relative">
                   <input
-                    type="checkbox"
+                    type="radio"
                     className="hidden"
-                    checked={selectedQuality.includes(quality)}
-                    onChange={() => toggleQuality(quality)}
+                    checked={selectedQuality===qualityId}
+                    onChange={() => toggleQuality(qualityId)}
                   />
-                  <div className={`px-3 py-1 border rounded-md transition  ${selectedQuality.includes(quality) ? "border bg-gray-300 text-black" : "border-white text-white"
+                  <div className={`px-3 py-1 border rounded-md transition  ${selectedQuality===qualityId ? "border bg-gray-300 text-black" : "border-white text-white"
                     }`}>
-                    {quality}
+                    {qualityId}
                   </div>
                 </label>
               ))}

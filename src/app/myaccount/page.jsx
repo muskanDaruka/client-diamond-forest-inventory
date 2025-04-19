@@ -1,5 +1,5 @@
 import Account from '@/components/MyAccount/Account'
-import ForgetPassword from '@/components/MyAccount/ForgetPassword'
+import ForgetPassword from '@/components/MyAccount/ForgotPasswordEmail'
 import Kyc from '@/components/MyAccount/Kyc'
 import SignIn from '@/components/MyAccount/SignIn'
 import SignUp from '@/components/MyAccount/SignUp'

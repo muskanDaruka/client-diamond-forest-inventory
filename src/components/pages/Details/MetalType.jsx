@@ -3,12 +3,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 function MetalType({ metalType }) {
-  const [selectedMetals, setSelectedMetals] = useState([]);
+  const [selectedMetal, setSelectedMetal] = useState([]);
 
-  const handleCheckboxChange = (id) => {
-    setSelectedMetals((prev) =>
-      prev.includes(id) ? prev.filter((metalId) => metalId !== id) : [...prev, id]
-    );
+  const handleRadioChange = (id) => {
+    setSelectedMetal(id);
   };
 
   return (
@@ -17,14 +15,14 @@ function MetalType({ metalType }) {
         {metalType.map((item) => (
           <label key={item.id} className="flex flex-col items-center cursor-pointer">
             <input
-              type="checkbox"
-              checked={selectedMetals.includes(item.id)}
-              onChange={() => handleCheckboxChange(item.id)}
+              type="radio"
+              checked={selectedMetal === item.id}
+              onChange={() => handleRadioChange(item.id)}
               className="hidden"
             />
             <div
               className={` text-sm text-[#332421] w-24 border flex items-center justify-center transition-all ${
-                selectedMetals.includes(item.id)
+                selectedMetal === item.id
                   ? "border-white border-4"
                   : "border-gray-300"
               }`}

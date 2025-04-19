@@ -15,6 +15,10 @@ const SignIn = () => {
         router.push('/account')
     };
 
+    const handleForgotPassword = () => {
+        router.push("/forgot-password-email")
+    }
+
     return (
         <div>
             <div className='bg-[#e6e5db] pt-32 min-h-screen grid content-center' style={{ fontFamily: 'var(--font-montserrat)' }}>
@@ -65,6 +69,25 @@ const SignIn = () => {
                                 {hide ? <FaRegEye /> : <FaRegEyeSlash />}
                             </div>
                         </div>
+                        <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                        <input
+                            type="checkbox"
+                            id="savePassword"
+                            className="h-4 w-4 text-blue-600"
+                        />
+                        <label htmlFor="savePassword" className="ml-2 text-[#333333] xl:text-md md:text-base text-sm">
+                            Save password
+                        </label>
+                    </div>
+                    <button
+                        type="button"
+                        onClick={handleForgotPassword}
+                        className="text-[#333333] xl:text-md md:text-base text-sm"
+                    >
+                        Forgot Password?
+                    </button>
+                </div>
                         <div className="text-center">
                             <button
                                 type="submit"
