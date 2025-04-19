@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import style1 from '../../../public/images/filter/Mixed_Metal_v2.webp';
 import { Icon } from "@iconify/react";
 import Image from 'next/image';
+import PriceRangeSlider from '../PriceRange';
 
 function Filters() {
     const [toggleMetal, setToggleMetal] = useState(true);
@@ -113,32 +114,33 @@ function Filters() {
                             <h3 className="text-xl font-medium text-black hover:text-[#666769]">Price</h3>
                             <Icon icon={togglePrice ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-black]" />
                         </div>
-                        {togglePrice && (
-                            <>
-                                <input
-                                    type="range"
-                                    className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-black"
-                                />
-                                <div className="flex justify-between text-sm text-gray-700">
-                                    <div className="flex items-center gap-2 xl:mt-0 mt-2">
-                                        <div className="relative flex items-center">
-                                            <span className="absolute left-2 text-black hover:text-[#666769]">$</span>
-                                            <input
-                                                type="number"
-                                                className="pl-6 pr-2 py-1 border border-gray-300 rounded-md w-20 text-center"
-                                            />
-                                        </div>
-                                        <span className="text-sm text-black hover:text-[#666769]">to</span>
-                                        <div className="relative flex items-center">
-                                            <span className="absolute left-2 text-black hover:text-[#666769]">$</span>
-                                            <input
-                                                type="number"
-                                                className="pl-6 pr-2 py-1 border border-gray-300 rounded-md w-20 text-center"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </>
+                         {togglePrice && (
+                            // <>
+                            //     <input
+                            //         type="range"
+                            //         className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-black"
+                            //     />
+                            //     <div className="flex justify-between text-sm text-gray-700">
+                            //         <div className="flex items-center gap-2 xl:mt-0 mt-2">
+                            //             <div className="relative flex items-center">
+                            //                 <span className="absolute left-2 text-black hover:text-[#666769]">$</span>
+                            //                 <input
+                            //                     type="number"
+                            //                     className="pl-6 pr-2 py-1 border border-gray-300 rounded-md w-20 text-center"
+                            //                 />
+                            //             </div>
+                            //             <span className="text-sm text-black hover:text-[#666769]">to</span>
+                            //             <div className="relative flex items-center">
+                            //                 <span className="absolute left-2 text-black hover:text-[#666769]">$</span>
+                            //                 <input
+                            //                     type="number"
+                            //                     className="pl-6 pr-2 py-1 border border-gray-300 rounded-md w-20 text-center"
+                            //                 />
+                            //             </div>
+                            //         </div>
+                            //     </div>
+                            // </>
+                        <PriceRangeSlider/>
                         )}
                     </div>
                 </div>

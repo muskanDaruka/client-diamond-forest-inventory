@@ -30,7 +30,7 @@ const ContactPage = () => {
                 />
             </div>
             <div className="relative z-10 xl:pt-48 md:pt-24 pt-14 px-6 xl:px-20" style={{fontFamily:'var(--font-montserrat)'}}>
-                <div className="grid grid-cols-1 xl:grid-cols-2 md:grid-cols-2 xl:gap-10 inset-shadow-sm shadow-2xl xl:p-8 md:p-6 p-4">
+                <div className="grid grid-cols-1 xl:grid-cols-2 md:grid-cols-2 xl:gap-10 rounded-3xl inset-shadow-sm shadow-2xl xl:p-8 md:p-6 p-4">
                     <div className="xl:p-6 md:p-4 p-2">
                         <h1 className="text-black text-2xl xl:text-4xl font-bold mb-6 hover:text-[#333333]">
                             Fill the form
@@ -93,7 +93,7 @@ const ContactPage = () => {
 
                             <button
                                 type="submit"
-                                className="bg-[#323232] hover:bg-black transition text-white px-8 py-2 rounded-full font-medium"
+                                className="bg-[#323232] hover:bg-black transition text-white px-8 py-2 rounded-md font-medium"
                             >
                                 Submit
                             </button>

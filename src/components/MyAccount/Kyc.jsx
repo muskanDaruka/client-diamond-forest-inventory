@@ -203,7 +203,7 @@ const Kyc = () => {
                         <div className="text-center">
                             <button
                                 type="submit"
-                                className="px-8 py-2 bg-[#323232] text-xl text-white font-medium rounded-3xl hover:bg-black transition-colors duration-200"
+                                className="px-8 py-2 bg-[#323232] text-xl text-white font-medium rounded-md hover:bg-black transition-colors duration-200"
                             >
                                 Register
                             </button>

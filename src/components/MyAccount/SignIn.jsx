@@ -27,7 +27,7 @@ const SignIn = () => {
             <div className="xl:text-2xl md:text-xl text-lg mb-6 font-medium">Not registered yet?</div>
             <Link
               href="/sign-up"
-              className="btn btn-primary rounded-md m-3 bg-[#323232] text-white px-6 py-2 xl:text-md md:text-base text-sm"
+              className="btn btn-primary rounded-md m-3 bg-[#323232] text-white px-6 py-2 xl:text-md md:text-base text-sm hover:bg-black"
             >
               SignUp
             </Link>
