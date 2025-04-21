@@ -63,7 +63,7 @@ const ProductDetail = () => {
     { id: "princess", img: princess, alt: "princess" },
     { id: "radiantSq", img: radiantSq, alt: "radiantSq" },
   ];
-  const caratWeights = ["1", "1 ½", "2", "2 ½", "3", "3 ½", "4", "4 ½", "5"];
+  const caratWeights = ["2 ½", "3", "3 ½", "4", "4 ½", "5", "5 ½", "6", "6 ½", "7", "7 ½", "8"];
   const diamondQuality = ["Best - D, VVS", "Better - E, VS1", "Good - FG, VS2"];
 
   const colors = [
