@@ -8,11 +8,11 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-        {/* <Account/> */}
-        {/* <SignUp/> */}
-        <SignIn/>
-        {/* <ForgetPassword/> */}
-        {/* <Kyc/> */}
+      {/* <Account/> */}
+      {/* <SignUp/> */}
+      <SignIn />
+      {/* <ForgetPassword/> */}
+      {/* <Kyc/> */}
     </div>
   )
 }

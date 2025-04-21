@@ -24,13 +24,13 @@ function Header() {
           onClick={() => setOpen(!open)}
         />
         <div className="flex justify-center items-center">
-        <div
-          className="font-medium text-3xl xl:text-3xl uppercase text-center cursor-pointer"
-          style={{ fontFamily: 'var(--font-montserrat)' }}
-          onClick={() => router.push("/")}
-        >
-          Diamond Forest
-        </div>
+          <div
+            className="font-medium text-3xl xl:text-3xl uppercase text-center cursor-pointer"
+            style={{ fontFamily: 'var(--font-montserrat)' }}
+            onClick={() => router.push("/")}
+          >
+            Diamond Forest
+          </div>
         </div>
         <div className="hidden lg:block text-center mt-2 space-x-24" >
           {route.map((item) => (
@@ -84,7 +84,7 @@ function Header() {
                 key={item.id}
                 onClick={() => {
                   router.push(item.path);
-                  setOpen(false); 
+                  setOpen(false);
                 }}
                 className="block w-full p-4 text-left text-gray-700 hover:text-black"
                 style={{ fontFamily: 'var(--font-montserrat)' }}

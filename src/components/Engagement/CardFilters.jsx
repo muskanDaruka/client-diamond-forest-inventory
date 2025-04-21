@@ -57,7 +57,7 @@ function CardFilters({ metalType, shape, carat }) {
                                 disabled={!scrollState[title]?.left}
                                 className="text-white hover:text-[#666769] disabled:text-gray-300"
                             >
-                                <SlArrowLeft size={20} className='xl:size-[20px] md:size-[18px] size-[15px]'/>
+                                <SlArrowLeft size={20} className='xl:size-[20px] md:size-[18px] size-[15px]' />
                             </button>
                             <div
                                 ref={scrollRefs[title]}
@@ -107,7 +107,7 @@ function CardFilters({ metalType, shape, carat }) {
                                 disabled={!scrollState[title]?.right}
                                 className="text-white hover:text-[#666769] disabled:text-gray-300"
                             >
-                                <SlArrowRight size={20} className='xl:size-[20px] md:size-[18px] size-[15px]'/>
+                                <SlArrowRight size={20} className='xl:size-[20px] md:size-[18px] size-[15px]' />
                             </button>
                         </div>
                     </div>

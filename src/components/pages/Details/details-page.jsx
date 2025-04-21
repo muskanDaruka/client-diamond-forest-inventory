@@ -127,12 +127,12 @@ const ProductDetail = () => {
             <span className="text-white md:text-base xl:text-xl text-lg line-through ml-2 hover:text-[#666769] cursor-pointer">$4000</span>
           </div>
           <div className="flex items-center gap-5">
-          <button className="bg-[#666769] xl:text-lg md:text-base text-md font-medium px-6 py-2 rounded-md shadow-md text-white hover:bg-gray-500 transition">
-            Add to Cart
-          </button>
-          <button className="bg-[#666769] xl:text-lg md:text-base text-md font-medium px-6 py-2 rounded-md shadow-md text-white hover:bg-gray-500 transition">
-            Buy Now
-          </button>
+            <button className="bg-[#666769] xl:text-lg md:text-base text-md font-medium px-6 py-2 rounded-md shadow-md text-white hover:bg-gray-500 transition">
+              Add to Cart
+            </button>
+            <button className="bg-[#666769] xl:text-lg md:text-base text-md font-medium px-6 py-2 rounded-md shadow-md text-white hover:bg-gray-500 transition">
+              Buy Now
+            </button>
           </div>
           <div className="">
             <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Metal Type:</h1>
@@ -204,10 +204,10 @@ const ProductDetail = () => {
                   <input
                     type="radio"
                     className="hidden"
-                    checked={selectedQuality===qualityId}
+                    checked={selectedQuality === qualityId}
                     onChange={() => toggleQuality(qualityId)}
                   />
-                  <div className={`px-3 py-1 border rounded-md transition  ${selectedQuality===qualityId ? "border bg-gray-300 text-black" : "border-white text-white"
+                  <div className={`px-3 py-1 border rounded-md transition  ${selectedQuality === qualityId ? "border bg-gray-300 text-black" : "border-white text-white"
                     }`}>
                     {qualityId}
                   </div>

@@ -1,16 +1,16 @@
 "use client";
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 const VideoSection = () => {
   const [open, setOpen] = useState(false);
-    const router = useRouter();
+  const router = useRouter();
 
   const videoSection = [
-    { type: 'video', media: '/images/Home/Bracelets.mp4', description: 'Elevate your everyday', path:"/bracelet" },
-    { type: 'video', media: '/images/Home/Earrings.mp4', description: 'Style simplified', path:"/bracelet" },
-    { type: 'video', media: '/images/Home/Necklace.mp4', description: 'Enhance everyday', path:"/bracelet" },
-    { type: 'video', media: '/images/Home/Rings.mp4', description: 'Where style meets function', path:"/bracelet" },
+    { type: 'video', media: '/images/Home/Bracelets.mp4', description: 'Elevate your everyday', path: "/bracelet" },
+    { type: 'video', media: '/images/Home/Earrings.mp4', description: 'Style simplified', path: "/bracelet" },
+    { type: 'video', media: '/images/Home/Necklace.mp4', description: 'Enhance everyday', path: "/bracelet" },
+    { type: 'video', media: '/images/Home/Rings.mp4', description: 'Where style meets function', path: "/bracelet" },
   ];
 
   return (
@@ -35,7 +35,7 @@ const VideoSection = () => {
             className="w-full h-full object-cover opacity-80"
             onClick={() => {
               router.push(item.path);
-              setOpen(false); 
+              setOpen(false);
             }}
           />
           <div className="absolute bottom-4 sm:bottom-6 w-full flex justify-center px-4">

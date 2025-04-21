@@ -22,8 +22,8 @@ const ProductDetailSlider = ({ slides, options, optionsThumbs }) => {
     if (!emblaMainApi) return;
     emblaMainApi.scrollTo(index);
     setSelectedIndex(index);
-  }; 
-  
+  };
+
   const onSelect = useCallback(() => {
     if (!emblaMainApi || !emblaThumbsApi) return;
     setSelectedIndex(emblaMainApi.selectedScrollSnap());
@@ -49,9 +49,8 @@ const ProductDetailSlider = ({ slides, options, optionsThumbs }) => {
                   onMouseLeave={() => setIsZoomed(false)}
                 >
                   <Image
-                    className={`object-cover w-full h-auto rounded-md transition-transform duration-300 ${
-                      isZoomed ? "scale-150" : "scale-100"
-                    }`}
+                    className={`object-cover w-full h-auto rounded-md transition-transform duration-300 ${isZoomed ? "scale-150" : "scale-100"
+                      }`}
                     alt="Product Image"
                     src={item.img}
                     priority
@@ -82,9 +81,8 @@ const ProductDetailSlider = ({ slides, options, optionsThumbs }) => {
             {slides.map((item, index) => (
               <div
                 key={index}
-                className={`embla-thumbs__slide shadow-2xl relative h-[80px] w-[80px] ${
-                  index === selectedIndex ? "border-2 border-blue-500" : ""
-                }`}
+                className={`embla-thumbs__slide shadow-2xl relative h-[80px] w-[80px] ${index === selectedIndex ? "border-2 border-blue-500" : ""
+                  }`}
               >
                 <button
                   onClick={() => onThumbClick(index)}

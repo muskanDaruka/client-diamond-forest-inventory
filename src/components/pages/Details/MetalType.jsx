@@ -21,19 +21,18 @@ function MetalType({ metalType }) {
               className="hidden"
             />
             <div
-              className={` text-sm text-[#332421] w-24 border flex items-center justify-center transition-all ${
-                selectedMetal === item.id
+              className={` text-sm text-[#332421] w-24 border flex items-center justify-center transition-all ${selectedMetal === item.id
                   ? "border-white border-4"
                   : "border-gray-300"
-              }`}
+                }`}
             >
               <Image
-      src={item.img}
-      alt={item.title}
-      width={96}
-      height={48}
-      className="object-cover"
-    />
+                src={item.img}
+                alt={item.title}
+                width={96}
+                height={48}
+                className="object-cover"
+              />
             </div>
             <span className="text-xs mt-1 text-white">{item.title}</span>
           </label>

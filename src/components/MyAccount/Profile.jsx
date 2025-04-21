@@ -4,7 +4,7 @@ import { FaSearch } from 'react-icons/fa'
 import profile from '../../../public/images/login/profile.png'
 import Image from 'next/image';
 
-function Profile({customClass}) {
+function Profile({ customClass }) {
     return (
         <div className={`flex justify-between items-center w-full z-10 px-6`} style={{ fontFamily: 'var(--font-montserrat)' }}>
             <div className='flex items-center w-1/2 md:w-auto'>

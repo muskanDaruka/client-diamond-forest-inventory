@@ -2,19 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import background from '../../public/images/Home/jewelry-bg.png';
 import { motion } from "framer-motion";
-import img1 from '../../public/images/Home/img1.png';
-import img2 from '../../public/images/Home/img2.png';
-import img3 from '../../public/images/Home/img3.png';
-import img4 from '../../public/images/Home/img4.png';
-import drop from '../../public/images/Home/drop.png';
-import moon from '../../public/images/Home/moon.png';
-import bottle from '../../public/images/Home/bottle.png';
-import treasure from '../../public/images/Home/treasure.png';
-import tub from '../../public/images/Home/tub.png';
-import heart from '../../public/images/Home/heart.png';
 
 const JewelleryCare = () => {
-    
+
     return (
         <div className="relative xl:h-auto min-h-screen bg-[#373941]">
             <div className="">
@@ -28,27 +18,27 @@ const JewelleryCare = () => {
                 />
             </div>
             <div className="relative text-center py-4 px-4 md:px-12">
-    <motion.h2
-        className="text-white italic text-2xl md:text-4xl xl:text-5xl"
-        style={{ fontFamily: 'Majesty, cursive' }}
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: false }}
-    >
-        Jewelry Care
-    </motion.h2>
-    <motion.p
-        className="text-white mt-4 text-base md:text-xl xl:text-2xl"
-        style={{ fontFamily: 'var(--font-montserrat)' }}
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: false }}
-    >
-        How should you take care of your jewelry
-    </motion.p>
-</div>
+                <motion.h2
+                    className="text-white italic text-2xl md:text-4xl xl:text-5xl"
+                    style={{ fontFamily: 'Majesty, cursive' }}
+                    initial={{ y: -20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: false }}
+                >
+                    Jewelry Care
+                </motion.h2>
+                <motion.p
+                    className="text-white mt-4 text-base md:text-xl xl:text-2xl"
+                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    initial={{ y: -20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: false }}
+                >
+                    How should you take care of your jewelry
+                </motion.p>
+            </div>
 
             {/*<div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 px-6 pb-16">
                 <div className="flex justify-center items-center">

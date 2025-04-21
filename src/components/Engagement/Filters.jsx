@@ -114,7 +114,7 @@ function Filters() {
                             <h3 className="text-xl font-medium text-black hover:text-[#666769]">Price</h3>
                             <Icon icon={togglePrice ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-black]" />
                         </div>
-                         {togglePrice && (
+                        {togglePrice && (
                             // <>
                             //     <input
                             //         type="range"
@@ -140,7 +140,7 @@ function Filters() {
                             //         </div>
                             //     </div>
                             // </>
-                        <PriceRangeSlider/>
+                            <PriceRangeSlider />
                         )}
                     </div>
                 </div>

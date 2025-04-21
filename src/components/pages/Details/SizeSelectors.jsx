@@ -7,7 +7,7 @@ function SizeSelectors({ sizes }) {
       <h1 className="font-bold text-[#332421]  hover:text-[#FF5F15]">Size (in)</h1>
       <div className="xl:mb-4">
         {sizes.map((size, index) => (
-          <CheckBoxButton key={index} title={size.title} value={size.value} id={size.id}/>
+          <CheckBoxButton key={index} title={size.title} value={size.value} id={size.id} />
         ))}
       </div>
     </div>

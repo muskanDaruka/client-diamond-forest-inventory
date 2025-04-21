@@ -35,7 +35,7 @@ const Home = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false}}
+          viewport={{ once: false }}
           variants={fadeIn}
           className="relative flex xl:flex-row flex-col xl:justify-around justify-center items-center p-4 h-screen"
         >
@@ -50,7 +50,7 @@ const Home = () => {
           </motion.div>
           <motion.p
             variants={fadeIn}
-            viewport={{ once: false}}
+            viewport={{ once: false }}
             className="relative text-xl xl:text-3xl font-medium italic font-montserrat leading-relaxed"
             style={{ fontFamily: "Public Sans, sans" }}
           >
@@ -100,7 +100,7 @@ const Home = () => {
               <motion.p
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false}}
+                viewport={{ once: false }}
                 variants={fadeIn} className="font-justify text-sm md:text-base xl:text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 Our focus is on building strong relationships, offering reliable service, and ensuring that our jewelry meets the highest standards of beauty and quality.
               </motion.p>
@@ -112,7 +112,7 @@ const Home = () => {
               <motion.p
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false}}
+                viewport={{ once: false }}
                 variants={fadeIn} className="font-justify text-sm md:text-base xl:text-xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 Whether you are a retailer, wholesaler, or designer, we are here to provide the perfect diamond jewelry solutions tailored to your business needs.
               </motion.p>
@@ -121,7 +121,7 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <JewelleryCare/>
+        <JewelleryCare />
       </section>
     </div>
   );
