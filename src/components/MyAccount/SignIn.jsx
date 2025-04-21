@@ -21,7 +21,7 @@ const SignIn = () => {
 
     return (
         <div>
-            <div className='bg-[#e6e5db] pt-32 min-h-screen grid content-center' style={{ fontFamily: 'var(--font-montserrat)' }}>
+            <div className='bg-[#e6e5db] pt-32 min-h-screen grid content-center cursor-pointer' style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <div className="flex flex-col md:flex-row items-center">
                     <div className="py-4 w-full md:w-1/2 text-center">
                         <div className="xl:text-2xl md:text-xl text-lg mb-6 font-medium">Not registered yet?</div>

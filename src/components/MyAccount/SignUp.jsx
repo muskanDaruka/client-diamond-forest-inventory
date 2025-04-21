@@ -18,7 +18,7 @@ const SignUp = () => {
 
     return (
         <div>
-            <div className="bg-[#e6e5db] pt-32 min-h-screen" style={{ fontFamily: 'var(--font-montserrat)' }}>
+            <div className="bg-[#e6e5db] pt-32 min-h-screen cursor-pointer" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <h1 className="text-3xl xl:text-6xl font-semibold text-center hover:text-[#323232] p-4" style={{ fontFamily: 'Poppins Medium' }}>
                     Create New Account
                 </h1>

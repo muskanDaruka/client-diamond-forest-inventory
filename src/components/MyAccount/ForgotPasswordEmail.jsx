@@ -13,7 +13,7 @@ const ForgotPasswordEmail = () => {
 
     return (
         <div>
-            <div className='bg-[#e6e5db] pt-32 min-h-screen grid content-center' style={{ fontFamily: 'var(--font-montserrat)' }}>
+            <div className='bg-[#e6e5db] pt-32 min-h-screen grid content-center cursor-pointer' style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <h1 className='text-3xl xl:text-6xl font-semibold text-center hover:text-[#323232] p-4' style={{ fontFamily: 'Poppins Medium' }}>Forget Password</h1>
                 <p className='text-lg xl:text-2xl text-center font-medium hover:text-[#323232] p-'>New Password</p>
                 <div className='flex justify-center mt-8'>

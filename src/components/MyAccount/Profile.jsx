@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 function Profile({ customClass }) {
     return (
-        <div className={`flex justify-between items-center w-full z-10 px-6`} style={{ fontFamily: 'var(--font-montserrat)' }}>
+        <div className={`flex justify-between items-center w-full z-10 px-6 cursor-pointer`} style={{ fontFamily: 'var(--font-montserrat)' }}>
             <div className='flex items-center w-1/2 md:w-auto'>
                 <div className='absolute ms-2 z-10  bg-[#323232] rounded-full shadow-md cursor-pointer'>
                     <FaSearch className="text-white cursor-pointer m-1" size={12} />

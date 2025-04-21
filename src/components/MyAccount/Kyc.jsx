@@ -11,7 +11,7 @@ const Kyc = () => {
     };
     return (
         <div>
-            <div className="bg-[#e6e5db] pt-24 min-h-screen grid content-center">
+            <div className="bg-[#e6e5db] pt-24 min-h-screen grid content-center cursor-pointer">
                 <form onSubmit={handleSubmit}>
                     <div className="p-6" style={{ fontFamily: 'var(--font-montserrat)' }}>
                         <h1 className="font-medium text-4xl text-center mb-8" style={{ fontFamily: 'Poppins Medium' }}>KYC</h1>

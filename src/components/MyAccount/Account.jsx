@@ -16,7 +16,7 @@ const Account = () => {
   ]
   return (
     <div>
-      <div className='bg-[#e6e5db] pt-32 min-h-screen'>
+      <div className='bg-[#e6e5db] pt-32 min-h-screen cursor-pointer'>
         <Profile />
         <h1 className="text-2xl xl:text-4xl font-medium hover:text-[#323232] p-6" style={{ fontFamily: 'Poppins Medium' }}>Dashboard</h1>
         <div className='grid place-items-center'>

@@ -20,7 +20,7 @@ const fadeLeft = {
 };
 const Home = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col cursor-pointer">
       <VideoSection />
       <section className="h-screen relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
