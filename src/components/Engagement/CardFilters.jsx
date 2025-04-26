@@ -46,7 +46,7 @@ function CardFilters({ metalType, shape, carat }) {
     };
 
     return (
-        <div className="container space-y-3 md:space-y-5">
+        <div className="container space-y-3 md:space-y-5" style={{ fontFamily: 'var(--font-montserrat)' }}>
             <div className="flex flex-col space-y-3 md:space-y-5">
                 {[{ title: 'Metal', items: metalType }, { title: 'Shape', items: shape }, { title: 'Carat', items: carat }].map(({ title, items }) => (
                     <div key={title} className="flex flex-row md:flex-row items-center md:items-start mt-2 cursor-pointer">

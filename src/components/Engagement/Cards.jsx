@@ -20,6 +20,7 @@ import CardFilters from './CardFilters';
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import Image from 'next/image';
 import { IoHeartOutline } from 'react-icons/io5';
+import ImageCarousel from './CardCarousel';
 
 const Cards = () => {
     const pathname = usePathname();
@@ -73,10 +74,10 @@ const Cards = () => {
     ];
 
     const images = [
-        { id: 1, src: "/images/bracelet/bracelet-1.png", title: "Round Bracelet" },
-        { id: 2, src: "/images/bracelet/bracelet-2.png", title: "Oval Bracelet" },
-        { id: 3, src: "/images/bracelet/bracelet-3.png", title: "Round Bracelet" },
-        { id: 4, src: "/images/bracelet/bracelet-4.png", title: "Oval Bracelet" },
+        { id: 1, src: "/images/ring/ring3.jpg", title: "Round Ring" },
+        { id: 2, src: "/images/ring/ring6.jpg", title: "Round Ring" },
+        { id: 3, src: "/images/ring/ring5.jpg", title: "Oval Ring" },
+        { id: 4, src: "/images/ring/ring1.jpg", title: "Oval Ring" },
     ];
 
     return (

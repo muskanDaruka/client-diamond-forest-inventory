@@ -10,7 +10,7 @@ function MetalType({ metalType }) {
   };
 
   return (
-    <div className="mt-5">
+    <div className="mt-5" style={{ fontFamily: 'var(--font-montserrat)' }}>
       <div className="flex gap-2">
         {metalType.map((item) => (
           <label key={item.id} className="flex flex-col items-center cursor-pointer">

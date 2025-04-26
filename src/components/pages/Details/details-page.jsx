@@ -27,18 +27,23 @@ import Selector from "./Selector";
 import yellow from '../../../../public/images/filter/yellow-gold.png'
 import rose from '../../../../public/images/filter/rose-gold.png'
 import white from '../../../../public/images/filter/white-gold.png'
+import RingSelector from "@/components/RingSelector";
+import ImageCarousel from "@/components/Engagement/CardCarousel";
 
 // const OPTIONS = {};
 
 const ProductDetail = () => {
   const { back } = useRouter();
   const [isZoomed, setIsZoomed] = useState(false);
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+  const [isZoomed3, setIsZoomed3] = useState(false);
   const [selectedShape, setSelectedShape] = useState([""]);
   const [selectedCarat, setSelectedCarat] = useState([""]);
   const [selectedQuality, setSelectedQuality] = useState([""]);
 
   const sliderImages = [
-    { id: 1, img: img1 },
+    // { id: 1, img: img1 },
     // { id: 2, img: img1 },
     // { id: 3, img: img1 },
   ];
@@ -95,29 +100,86 @@ const ProductDetail = () => {
           <FaArrowLeft size={22} />
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 xl:gap-8 gap-2 font-montserrat xl:px-6 md:px-4 px-2 pb-6 cursor-pointer">
-        <div
-          className="relative w-full h-auto overflow-hidden cursor-crosshair"
-          onMouseEnter={() => setIsZoomed(true)}
-          onMouseLeave={() => setIsZoomed(false)}
-        >
-          <div className="relative w-full h-full p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 xl:gap-8 gap-2 xl:px-6 md:px-4 px-2 pb-6 cursor-pointer">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 ">
+          <div
+            onMouseEnter={() => setIsZoomed(true)}
+            onMouseLeave={() => setIsZoomed(false)}
+          >
             <Image
-              src={img1}
+              src="/images/ring/ring4.jpg"
               alt="Product Image"
-              width={400}
-              height={400}
-              className={`
-        object-cover w-full h-full rounded-md transition-transform duration-300
-        ${isZoomed ? "scale-150" : "scale-100"}
-      `}
+              width={500}
+              height={500}
+              className={`object-cover w-full h-[500px] rounded-md transition-transform duration-300 ${isZoomed ? "scale-105" : "scale-100"
+                }`}
+              style={{ transformOrigin: "center center" }}
+            />
+          </div>
+          <ImageCarousel className="w-full h-[500px] object-cover rounded-md" />
+          <div
+            onMouseEnter={() => setIsZoomed1(true)}
+            onMouseLeave={() => setIsZoomed1(false)}
+          >
+            <Image
+              src="/images/ring/hand4.jpg"
+              alt="Product Image"
+              width={500}
+              height={500}
+              className={`object-cover w-full h-[500px] rounded-md transition-transform duration-300 ${isZoomed1 ? "scale-105" : "scale-100"
+                }`}
+              style={{ transformOrigin: "center center" }}
+            />
+          </div>
+          <video
+            src="/images/bracelet/video2.mp4"
+            muted
+            autoPlay
+            loop
+            playsInline
+            className="w-full h-[500px] object-fill rounded-md"
+          />
+          <video
+            src="/images/bracelet/video.mp4"
+            muted
+            autoPlay
+            loop
+            playsInline
+            className="w-full h-[500px] object-cover rounded-md"
+          />
+          <RingSelector />
+          <div
+            onMouseEnter={() => setIsZoomed2(true)}
+            onMouseLeave={() => setIsZoomed2(false)}
+          >
+            <Image
+              src="/images/ring/hand2.jpg"
+              alt="Product Image"
+              width={500}
+              height={500}
+              className={`object-cover w-full h-[500px] rounded-md transition-transform duration-300 ${isZoomed2 ? "scale-105" : "scale-100"
+                }`}
+              style={{ transformOrigin: "center center" }}
+            />
+          </div>
+          <div
+            onMouseEnter={() => setIsZoomed3(true)}
+            onMouseLeave={() => setIsZoomed3(false)}
+          >
+            <Image
+              src="/images/ring/hand3.jpg"
+              alt="Product Image"
+              width={500}
+              height={500}
+              className={`object-cover w-full h-[500px] rounded-md transition-transform duration-300 ${isZoomed3 ? "scale-105" : "scale-100"
+                }`}
               style={{ transformOrigin: "center center" }}
             />
           </div>
         </div>
-        <div className="space-y-4 p-2">
+        <div className="space-y-4 p-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
           <h1 className="xl:text-2xl md:text-base text-xl font-semibold text-white hover:text-[#666769]">
-            Emerald East - West Bracelet
+            Emerald East - West Ring
           </h1>
           <p className="text-sm text-white hover:text-[#666769]">
             14K White Gold, FG, VS2+ | IGI Certified, 14 Emerald stone
@@ -188,7 +250,7 @@ const ProductDetail = () => {
                     checked={selectedCarat === caratId}
                     onChange={() => toggleCarat(caratId)}
                   />
-                  <div className={`px-3 py-1 rounded-md transition text-white ${selectedCarat === caratId ? "border " : "border-white"
+                  <div className={`xl:px-3 md:px-2 px-1 py-1 rounded-md transition text-white ${selectedCarat === caratId ? "border " : "border-white"
                     }`}>
                     {caratId}
                   </div>
@@ -216,7 +278,7 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="mt-6">
-            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Bracelet Size (In Inches)</h1>
+            <h1 className="font-bold mb-1 text-white hover:text-[#666769]">Ring Size</h1>
             <select className="w-full p-2 border rounded-md text-white">
               <option className="text-black hover:text-[#666769]">Select</option>
               {["4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8"].map((size) => (

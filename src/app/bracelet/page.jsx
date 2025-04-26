@@ -24,7 +24,7 @@ function Page() {
     ]
     return (
         <>
-            <div className="font-montserrat pt-24 bg-[#373941]">
+            <div className="pt-24 bg-[#373941]" style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <div className="xl:pt-8 pt-4 xl:px-8 px-4 cursor-pointer">
                     <button
                         onClick={() => back()}

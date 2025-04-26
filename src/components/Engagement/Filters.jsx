@@ -56,7 +56,7 @@ function Filters() {
     };
     return (
         <>
-            <div className='grid xl:grid-cols-4 gap-6 m-4 font-montserrat'>
+            <div className='grid xl:grid-cols-4 gap-6 m-4' style={{ fontFamily: 'var(--font-montserrat)' }}>
                 <div>
                     <div className='xl:mt-0 mt-6'>
                         <div className="flex justify-between items-center cursor-pointer" onClick={() => setToggleMetal(!toggleMetal)}>
@@ -146,14 +146,14 @@ function Filters() {
                 </div>
                 <div className='xl:mt-0 mt-6'>
                     <div className="flex justify-between items-center cursor-pointer" onClick={() => setToggleWidth(!toggleWidth)}>
-                        <p className="xl:text-xl text-md font-semibold font-montserrat text-black hover:text-[#666769]">Width</p>
+                        <p className="xl:text-xl text-md font-semibold text-black hover:text-[#666769]">Width</p>
                         <Icon icon={toggleWidth ? "mdi:chevron-up" : "mdi:chevron-down"} className="text-xl text-black" />
                     </div>
                     {toggleWidth && (
                         width.map(item => (
                             <div key={item.id} className="flex gap-3 items-center">
                                 <input type="checkbox" className="h-5 w-5" />
-                                <div className="text-base xl:text-lg text-black font-montserrat font-normal hover:text-[#666769]">
+                                <div className="text-base xl:text-lg text-black font-normal hover:text-[#666769]">
                                     {item.title}
                                 </div>
                             </div>
