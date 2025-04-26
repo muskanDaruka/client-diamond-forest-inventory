@@ -2,7 +2,7 @@
 const HorizontalList = ({ data, setCurrentSlide, currentSlide }) => {
     const handleItemClick = (index) => {
         if (index >= 0 && index < data.length) {
-            setCurrentSlide(index);
+            // setCurrentSlide(index);
         }
     };
 
