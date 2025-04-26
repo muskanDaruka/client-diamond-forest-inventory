@@ -13,7 +13,7 @@ const HorizontalList = ({ data, setCurrentSlide, currentSlide }) => {
                     <li
                         key={item}
                         onClick={() => handleItemClick(index)}
-                        className={`mb-2 sm:mb-0 px-24 text-center mx-auto text-white hover:text-black hover:bg-white text-md xl:text-2xl cursor-pointer border border-white ${index === currentSlide ? "text-white font-bold text-md underline xl:text-2xl" : "text-md xl:text-2xl"}`}
+                        className={`mb-2 sm:mb-0 xl:px-24 md:px-10 px-6 text-center mx-auto text-white hover:text-black hover:bg-white text-sm xl:text-2xl cursor-pointer border border-white ${index === currentSlide ? "text-white font-bold text-sm underline xl:text-2xl" : "text-sm xl:text-2xl"}`}
                     >
                         {item}
                     </li>

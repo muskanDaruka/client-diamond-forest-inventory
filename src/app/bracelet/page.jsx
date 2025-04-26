@@ -89,7 +89,7 @@ function Page() {
                         <Filters />
                     </div>
                 </div>
-                <div className='flex justify-between items-center m-8 mb-0 cursor-pointer lg:hidden'>
+                <div className='flex justify-between items-center ml-2 mb-0 cursor-pointer lg:hidden'>
                     <div className="flex items-center gap-3 p-1" onClick={() => setIsOpen(true)}>
                         <h3 className="xl:text-2xl text-md font-medium text-white hover:text-[#666769]">Filter</h3>
                         <TbAdjustmentsHorizontal size={25} className="text-white hover:text-[#666769]" />

@@ -23,6 +23,7 @@ import Image from "next/image";
 import MetalType from "./MetalType";
 import { FaArrowLeft } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import SpinningImage from "@/components/RotateImg";
 import Selector from "./Selector";
 import yellow from '../../../../public/images/filter/yellow-gold.png'
 import rose from '../../../../public/images/filter/rose-gold.png'
@@ -139,14 +140,15 @@ const ProductDetail = () => {
             playsInline
             className="w-full h-[500px] object-fill rounded-md"
           />
-          <video
+          {/* <video
             src="/images/bracelet/video.mp4"
             muted
             autoPlay
             loop
             playsInline
             className="w-full h-[500px] object-cover rounded-md"
-          />
+          /> */}
+          <SpinningImage/>
           <RingSelector />
           <div
             onMouseEnter={() => setIsZoomed2(true)}

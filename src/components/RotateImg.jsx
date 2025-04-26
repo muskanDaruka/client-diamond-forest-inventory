@@ -1,29 +1,35 @@
-// components/RotatingImage.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
-export default function RotatingImage() {
+export default function SpinningImage() {
   const [rotation, setRotation] = useState(0);
+  const animationRef = useRef();
 
   const handleMouseMove = (e) => {
     const { clientX, currentTarget } = e;
     const { left, width } = currentTarget.getBoundingClientRect();
-    const x = clientX - left; // Mouse X position within the div
-    const rotationDegree = ((x / width) - 0.5) * 360; // Map x position to rotation (-180deg to 180deg)
-    setRotation(rotationDegree);
+    const x = clientX - left;
+    const rotationDegree = (x / width) * 360;
+
+    if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current);
+    }
+    animationRef.current = requestAnimationFrame(() => {
+      setRotation(rotationDegree);
+    });
   };
 
   return (
     <div
-      className="w-full h-screen flex items-center justify-center bg-gray-100"
+      className="w-full h-auto flex items-center justify-center bg-black overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       <img
-        src="/images/bracelet/ring10.jpg" // <-- put your image in public folder
-        alt="Rotating"
-        className="w-64 h-64 object-contain transition-transform duration-300"
-        style={{ transform: `rotateY(${rotation}deg)` }}
+        src="/images/bracelet/ring14.png"
+        alt="Spinning"
+        className=" object-cover transition-transform duration-300 ease-in-out"
+        style={{ transform: `rotate(${rotation}deg)` }}
       />
     </div>
   );
