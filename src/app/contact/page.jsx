@@ -19,7 +19,7 @@ const ContactPage = () => {
     };
 
     return (
-        <div className="relative min-h-screen xl:p-0 md:p-2 p-2">
+        <div className="relative min-h-screen xl:p-0 md:p-2 p-2 cursor-pointer">
             <div className="absolute inset-0 z-0">
                 <Image
                     src={background}

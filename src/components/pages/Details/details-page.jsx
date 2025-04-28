@@ -140,15 +140,15 @@ const ProductDetail = () => {
             playsInline
             className="w-full h-[500px] object-fill rounded-md"
           />
-          <video
+          {/* <video
             src="/images/bracelet/video.mp4"
             muted
             autoPlay
             loop
             playsInline
             className="w-full h-[500px] object-cover rounded-md"
-          />
-          {/* <SpinningImage/> */}
+          /> */}
+          <SpinningImage/>
           <RingSelector />
           <div
             onMouseEnter={() => setIsZoomed2(true)}
