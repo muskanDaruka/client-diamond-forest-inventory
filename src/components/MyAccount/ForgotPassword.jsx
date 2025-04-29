@@ -1,12 +1,14 @@
 "use client";
 import React, { useState } from 'react'
-import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
+import { FaArrowLeft, FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 const ForgotPassword = () => {
     const [newPassword, setNewPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [hide, setHide] = useState(false);
     const [passHide, setPassHide] = useState(false)
+    const { back } = useRouter();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,6 +17,14 @@ const ForgotPassword = () => {
     return (
         <div>
             <div className='bg-[#e6e5db] pt-32 min-h-screen grid content-center cursor-pointer' style={{ fontFamily: 'var(--font-montserrat)' }}>
+                <div className="xl:px-8 px-4 cursor-pointer pb-5">
+                        <button
+                          onClick={() => back()}
+                          className="m-2 text-xl border-0 flex items-center font-serif text-black"
+                        >
+                          <FaArrowLeft size={22} />
+                        </button>
+                      </div>
                 <h1 className='text-3xl xl:text-6xl font-semibold text-center hover:text-[#323232] p-4' style={{ fontFamily: 'Poppins Medium' }}>Forget Password</h1>
                 <p className='text-lg xl:text-2xl text-center font-medium hover:text-[#323232] p-'>New Password</p>
                 <div className='flex justify-center mt-8'>

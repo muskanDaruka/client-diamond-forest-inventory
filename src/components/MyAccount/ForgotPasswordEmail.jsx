@@ -1,19 +1,28 @@
 "use client";
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
+import { FaArrowLeft } from 'react-icons/fa';
 
 const ForgotPasswordEmail = () => {
     const [email, setEmail] = useState('')
-    const router = useRouter()
+    const {push, back} = useRouter()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        router.push('/forgot-password-email/forgot-password')
+        push('/forgot-password-email/forgot-password')
     };
 
     return (
         <div>
             <div className='bg-[#e6e5db] pt-32 min-h-screen grid content-center cursor-pointer' style={{ fontFamily: 'var(--font-montserrat)' }}>
+            <div className="pb-5 xl:px-8 px-4 cursor-pointer">
+                        <button
+                          onClick={() => back()}
+                          className="m-2 text-xl border-0 flex items-center font-serif text-black"
+                        >
+                          <FaArrowLeft size={22} />
+                        </button>
+                      </div>
                 <h1 className='text-3xl xl:text-6xl font-semibold text-center hover:text-[#323232] p-4' style={{ fontFamily: 'Poppins Medium' }}>Forget Password</h1>
                 <p className='text-lg xl:text-2xl text-center font-medium hover:text-[#323232] p-'>New Password</p>
                 <div className='flex justify-center mt-8'>
